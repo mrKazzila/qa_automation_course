@@ -12,7 +12,7 @@ class Figure:
     @staticmethod
     def validate_figure(figure):
         if not isinstance(figure, Figure):
-            raise ValueError(f'Incorrect class passed: {figure.__class__.__name__} is not {Figure.__name__}')
+            raise ValueError(f'Incorrect class passed. {figure.__class__.__name__} is not {Figure.__name__}')
 
     @property
     def area(self):
