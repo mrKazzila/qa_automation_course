@@ -1,6 +1,6 @@
 import pytest
-from src.Figure import Figure, ImpossibleFigureError
-from src.Triangle import Triangle
+from homework_2.src.Figure import Figure, ImpossibleFigureError
+from homework_2.src.Triangle import Triangle
 
 
 @pytest.mark.smoke

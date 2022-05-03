@@ -1,6 +1,6 @@
 import pytest
-from src.Figure import Figure, ImpossibleFigureError
-from src.Circle import Circle
+from homework_2.src.Figure import Figure, ImpossibleFigureError
+from homework_2.src.Circle import Circle
 
 
 @pytest.mark.smoke

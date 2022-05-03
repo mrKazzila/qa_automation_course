@@ -1,11 +1,11 @@
 import pytest
 
-from src.Triangle import Triangle
-from src.Square import Square
-from src.Rectangle import Rectangle
-from src.Circle import Circle
+from homework_2.src.Triangle import Triangle
+from homework_2.src.Square import Square
+from homework_2.src.Rectangle import Rectangle
+from homework_2.src.Circle import Circle
 
-from tests.FakeFigure import FakeFigure
+from homework_2.tests.FakeFigure import FakeFigure
 
 
 @pytest.fixture()

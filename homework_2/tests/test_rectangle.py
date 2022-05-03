@@ -1,6 +1,6 @@
 import pytest
-from src.Figure import Figure, ImpossibleFigureError
-from src.Rectangle import Rectangle
+from homework_2.src.Figure import Figure, ImpossibleFigureError
+from homework_2.src.Rectangle import Rectangle
 
 
 @pytest.mark.smoke

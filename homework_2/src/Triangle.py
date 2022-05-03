@@ -1,4 +1,4 @@
-from src.Figure import Figure, ImpossibleFigureError
+from homework_2.src.Figure import Figure, ImpossibleFigureError
 from math import sqrt
 
 

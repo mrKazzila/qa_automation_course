@@ -1,6 +1,6 @@
 import pytest
-from src.Figure import Figure, ImpossibleFigureError
-from src.Square import Square
+from homework_2.src.Figure import Figure, ImpossibleFigureError
+from homework_2.src.Square import Square
 
 
 @pytest.mark.smoke
