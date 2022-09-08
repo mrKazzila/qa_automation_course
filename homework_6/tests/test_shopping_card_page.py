@@ -1,37 +1,26 @@
-from selenium.webdriver.common.by import By
-
-from framework import wait_element, wait_title_contain
-
-
-class CartPage:
-    ADD_URL: str = r"index.php?route=checkout/cart"
-    TITLE: str = 'Shopping Cart'
-    LOGO: tuple = (By.CSS_SELECTOR, "img[title='Your Store']")
-    SEARCH: tuple = (By.CSS_SELECTOR, "input[name='search']")
-    CONTENT_FIELD: tuple = (By.CSS_SELECTOR, "div[id='content']")
-    CONTINUE_BTN: tuple = (By.CSS_SELECTOR, "div[class='pull-right']")
+from homework_6.pages.CartPage import CartPage
 
 
 def test_cart_page_title(driver, base_url):
     driver.get(f'{base_url}{CartPage.ADD_URL}')
-    wait_title_contain(driver, CartPage.TITLE)
+    CartPage(driver)._wait_title_contain(CartPage.TITLE)
 
 
 def test_cart_page_logo(driver, base_url):
     driver.get(f'{base_url}{CartPage.ADD_URL}')
-    wait_element(driver, CartPage.LOGO)
+    CartPage(driver)._wait_element(CartPage.LOGO)
 
 
 def test_cart_page_search(driver, base_url):
     driver.get(f'{base_url}{CartPage.ADD_URL}')
-    wait_element(driver, CartPage.SEARCH)
+    CartPage(driver)._wait_element(CartPage.SEARCH)
 
 
 def test_cart_page_goods(driver, base_url):
     driver.get(f'{base_url}{CartPage.ADD_URL}')
-    wait_element(driver, CartPage.CONTENT_FIELD)
+    CartPage(driver)._wait_element(CartPage.CONTENT_FIELD)
 
 
 def test_cart_page_content_field(driver, base_url):
     driver.get(f'{base_url}{CartPage.ADD_URL}')
-    wait_element(driver, CartPage.CONTINUE_BTN, timeout=8)
+    CartPage(driver)._wait_element(CartPage.CONTINUE_BTN, timeout=8)
