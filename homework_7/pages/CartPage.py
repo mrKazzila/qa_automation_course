@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from homework_6.pages.BasePage import BasePage
+from homework_7.pages.BasePage import BasePage
 
 
 class CartPage(BasePage):

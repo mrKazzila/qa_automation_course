@@ -1,4 +1,4 @@
-from homework_6.pages.ProductPage import ProductPage
+from homework_7.pages.ProductPage import ProductPage
 
 
 def test_product_page_title(driver, base_url):

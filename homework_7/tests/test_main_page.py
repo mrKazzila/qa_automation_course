@@ -1,4 +1,4 @@
-from homework_6.pages.MainPage import MainPage
+from homework_7.pages.MainPage import MainPage
 
 
 def test_main_page_title(driver, base_url):
@@ -29,4 +29,3 @@ def test_main_page_goods(driver, base_url):
 def test_switch_currency(driver, base_url):
     driver.get(base_url)
     MainPage(driver).switch_currency()
-
