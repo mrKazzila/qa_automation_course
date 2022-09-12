@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 
 from homework_7.pages.BasePage import BasePage
@@ -23,6 +24,7 @@ class UserPage(BasePage):
 
     ACCEPT_REGISTRATION: tuple = (By.XPATH, "//h1[contains(text(),'Your Account Has Been Created!')]")
 
+    @allure.step
     def input_user_data_in_field(self):
         self.logger.info(f'Add register information for test user')
         self._wait_element(self.FIRST_NAME_FIELD).send_keys(User.FIRST_NAME)
@@ -32,11 +34,13 @@ class UserPage(BasePage):
         self._wait_element(self.PASSWORD_FIELD).send_keys(User.PASSWORD)
         self._wait_element(self.CONFIRM_PASSWORD_FIELD).send_keys(User.PASSWORD)
 
+    @allure.step
     def click_privacy_and_continue_for_registration(self):
         self.logger.info(f'Registration test user')
         self._click(self.PRIVACY_CHECKBOX_BTN)
         self._click(self.CONTINUE_BUTTON)
 
+    @allure.step
     def checking_registration(self):
         self.logger.info(f'Check registration')
         self._wait_element(self.ACCEPT_REGISTRATION)

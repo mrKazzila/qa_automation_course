@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 
 from homework_7.pages.BasePage import BasePage
@@ -38,12 +39,15 @@ class AdminPage(BasePage):
     SELECT_PRODUCT: tuple = (By.CSS_SELECTOR, "input[name='selected[]']")
     PRODUCT_DELETE_BTN: tuple = (By.CSS_SELECTOR, '.btn-danger')
 
+    @allure.step
     def open_catalog(self):
         [self._click(btn) for btn in (self.CATALOG_BTN, self.PRODUCT_BTN)]
 
+    @allure.step
     def create_product(self):
         self._click(self.ADD_NEW_PRODUCT_BTN)
 
+    @allure.step
     def add_new_product_info(self):
         self.logger.info(f'Add product info')
         self._wait_element(self.PRODUCT_NAME).send_keys(Product.NAME)
@@ -53,19 +57,23 @@ class AdminPage(BasePage):
         self._wait_element(self.PRICE).send_keys(Product.PRICE)
         self._click(self.SAVE_BTN)
 
+    @allure.step
     def find_product(self):
         self.logger.info(f'Find product {Product.NAME}')
         self._wait_element(self.FILTER_BY_NAME_FIELD).send_keys(Product.NAME)
         self._click(self.FILTER_BTN)
 
+    @allure.step
     def delete_product(self):
         self.logger.info(f'Delete product')
         self._click(self.SELECT_PRODUCT)
         self._click(self.PRODUCT_DELETE_BTN)
         self._accept_allert()
 
+    @allure.step
     def check_add_product(self):
         assert len(self._wait_elements(self.PRODUCT_FIND)) > 3, "Product not added!"
 
+    @allure.step
     def check_del_product(self):
         assert self._wait_element(self.NO_RESULT).text == "No results!", "Product not deleted!"

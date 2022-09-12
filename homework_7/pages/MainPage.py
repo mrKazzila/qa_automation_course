@@ -1,5 +1,6 @@
 from collections import namedtuple
 
+import allure
 from selenium.webdriver.common.by import By
 
 from homework_7.pages.BasePage import BasePage
@@ -29,6 +30,7 @@ class MainPage(BasePage):
         CURRENCY(name=USD, check=IS_USD_CURRENCY)
     )
 
+    @allure.step
     def switch_currency(self):
         for currency in self.CURRENCY_DATA:
             self._click(self.CURRENCY_BTN)
