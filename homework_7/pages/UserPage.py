@@ -24,6 +24,7 @@ class UserPage(BasePage):
     ACCEPT_REGISTRATION: tuple = (By.XPATH, "//h1[contains(text(),'Your Account Has Been Created!')]")
 
     def input_user_data_in_field(self):
+        self.logger.info(f'Add register information for test user')
         self._wait_element(self.FIRST_NAME_FIELD).send_keys(User.FIRST_NAME)
         self._wait_element(self.LAST_NAME_FIELD).send_keys(User.LAST_NAME)
         self._wait_element(self.EMAIL_FIELD).send_keys(User.EMAIL)
@@ -32,8 +33,10 @@ class UserPage(BasePage):
         self._wait_element(self.CONFIRM_PASSWORD_FIELD).send_keys(User.PASSWORD)
 
     def click_privacy_and_continue_for_registration(self):
+        self.logger.info(f'Registration test user')
         self._click(self.PRIVACY_CHECKBOX_BTN)
         self._click(self.CONTINUE_BUTTON)
 
     def checking_registration(self):
+        self.logger.info(f'Check registration')
         self._wait_element(self.ACCEPT_REGISTRATION)

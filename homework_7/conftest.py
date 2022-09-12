@@ -1,3 +1,4 @@
+import logging
 import os
 
 import pytest
@@ -49,5 +50,8 @@ def driver(request):
 
     browser.maximize_window()
     request.addfinalizer(browser.quit)
+
+    browser.test_name = request.node.name
+    browser.log_level = logging.DEBUG
 
     return browser

@@ -34,3 +34,4 @@ class MainPage(BasePage):
             self._click(self.CURRENCY_BTN)
             self._click(currency.name)
             self._wait_element(currency.check)
+            self.logger.info(f'Switch currency {currency.name[1]}')
