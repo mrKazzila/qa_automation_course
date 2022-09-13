@@ -1,4 +1,5 @@
 import allure
+import pytest
 
 from homework_7.pages.UserPage import UserPage
 
@@ -41,6 +42,7 @@ def test_registration_new_user(driver, base_url):
     UserPage(driver).checking_registration()
 
 
+@pytest.mark.xfail(reason='Предусмотрите снятие скриншота и добавление его в отчёт при падении тестов.')
 @UserPage.check_test
 @allure.step('Тест на добавление скрина при фейле')
 def test_fail(driver, base_url):

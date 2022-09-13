@@ -18,7 +18,7 @@ class BasePage:
         self.driver = driver
         self.__config_logger()
 
-    def __config_logger(self, to_file=True):
+    def __config_logger(self, to_file: bool = False):
         self.logger = logging.getLogger(type(self).__name__)
         os.makedirs("logs", exist_ok=True)
         if to_file:

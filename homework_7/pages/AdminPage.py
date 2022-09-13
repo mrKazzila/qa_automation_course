@@ -1,3 +1,5 @@
+from datetime import datetime
+
 import allure
 from selenium.webdriver.common.by import By
 
@@ -5,7 +7,8 @@ from homework_7.pages.BasePage import BasePage
 
 
 class Product:
-    NAME: str = 'TestProduct'
+    unix_time = str(int(datetime.timestamp(datetime.now())))
+    NAME: str = f'TestProduct{unix_time}'
     METE_TAG_TITLE: str = 'TestProductTag'
     MODEL: str = 'TestModel'
     PRICE: str = '1000'

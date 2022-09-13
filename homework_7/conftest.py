@@ -6,26 +6,18 @@ import allure
 import pytest
 from selenium import webdriver
 
+drivers = os.path.expanduser("drivers")
+
 
 def pytest_addoption(parser):
-    parser.addoption(
-        "--drivers",
-        default=os.path.expanduser("drivers"),
-        help="This is default path with drivers",
-        action="store"
-    )
-    parser.addoption(
-        "--browser",
-        default="chrome",
-        help="This is default browser",
-        action="store"
-    )
-    parser.addoption(
-        "--url",
-        default="http://192.168.0.179:8081/",
-        help='This is default url',
-        action="store"
-    )
+    parser.addoption("--browser", action="store", default="chrome")
+    parser.addoption("--executor", action="store", default="192.168.0.179")
+
+    parser.addoption("--vnc", action="store_true", default=False)
+    parser.addoption("--logs", action="store_true", default=False)
+    parser.addoption("--video", action="store_true", default=True)
+    parser.addoption("--url", action="store", default="http://192.168.0.179:8081/")
+    parser.addoption("--bversion")
 
 
 @pytest.fixture
@@ -35,22 +27,49 @@ def base_url(request):
 
 @pytest.fixture
 def driver(request):
-    driver = request.config.getoption("--drivers")
-    browser_name = request.config.getoption("--browser")
-    version = None
-    executor_url = None
 
-    if browser_name == "chrome":
-        browser = webdriver.Chrome(executable_path=f'{driver}/chromedriver')
-    elif browser_name == "firefox":
-        browser = webdriver.Firefox(executable_path=f'{driver}/geckodriver')
-    elif browser_name == "opera":
-        # fix bug with dict https://github.com/operasoftware/operachromiumdriver/issues/96#issuecomment-985291083
-        options = webdriver.ChromeOptions()
+    driver = request.config.getoption("--browser")
+    vnc = request.config.getoption("--vnc")
+    logs = request.config.getoption("--logs")
+    video = request.config.getoption("--video")
+    version = request.config.getoption("--bversion")
+    executor = request.config.getoption('--executor')
+
+    executor_url = f"http://{executor}:4444/wd/hub"
+
+    # fix bug with dict https://github.com/operasoftware/operachromiumdriver/issues/96#issuecomment-985291083
+    options = webdriver.ChromeOptions()
+    if driver == "opera":
         options.add_experimental_option('w3c', True)
-        browser = webdriver.Opera(executable_path=f'{driver}/operadriver', options=options)
+
+    if executor == "local":
+        if driver == "chrome":
+            browser = webdriver.Chrome(executable_path=f'{drivers}/chromedriver')
+        elif driver == "firefox":
+            browser = webdriver.Firefox(executable_path=f'{drivers}/geckodriver')
+        elif driver == "opera":
+            browser = webdriver.Opera(
+                executable_path=f'{drivers}/operadriver', options=options
+            )
+        else:
+            raise ValueError(f"Browser {driver} not supported!")
     else:
-        raise ValueError(f"Browser {browser_name} not supported!")
+        capabilities = {
+            "browserName": driver,
+            "browserVersion": version,
+            "selenoid:options": {
+                "enableVNC": vnc,
+                "enableVideo": video,
+                "enableLog": logs
+            },
+            "name": "OtusQAPython"
+        }
+
+        browser = webdriver.Remote(
+            desired_capabilities=capabilities,
+            command_executor=executor_url,
+            options=options
+        )
 
     allure.attach(
         name=browser.session_id,
