@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import NoReturn
 
-from homework_8.app.comands import PsAuxParser
+from comands import PsAuxParser
 
 
 def generate_result_file_name() -> str:
