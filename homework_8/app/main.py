@@ -1,6 +1,6 @@
 from functools import wraps
 
-from homework_8.app.helpers import ReportCreator, create_file, generate_result_file_name
+from helpers import create_file, generate_result_file_name, ReportCreator
 
 
 def exception_decorator(func):
