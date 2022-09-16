@@ -1,7 +1,7 @@
 import allure
 import pytest
 
-from homework_7.pages.UserPage import UserPage
+from pages.UserPage import UserPage
 
 
 @allure.step('Проверяю тайтл страницы')

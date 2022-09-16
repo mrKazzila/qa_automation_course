@@ -1,6 +1,6 @@
 import allure
 
-from homework_7.pages.CartPage import CartPage
+from pages.CartPage import CartPage
 
 
 @allure.step('Проверяю тайтл страницы')

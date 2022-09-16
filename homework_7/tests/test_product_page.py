@@ -1,6 +1,6 @@
 import allure
 
-from homework_7.pages.ProductPage import ProductPage
+from pages.ProductPage import ProductPage
 
 
 @allure.step('Проверяю тайтл страницы')

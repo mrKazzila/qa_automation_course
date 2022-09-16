@@ -1,7 +1,7 @@
 import allure
 
-from homework_7.pages.AdminPage import AdminPage
-from homework_7.pages.elements.LoginForms import AdminLoginForm
+from pages.AdminPage import AdminPage
+from pages.elements.LoginForms import AdminLoginForm
 
 
 @allure.step('Проверяю тайтл страницы')
