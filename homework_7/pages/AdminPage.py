@@ -3,7 +3,7 @@ from datetime import datetime
 import allure
 from selenium.webdriver.common.by import By
 
-from homework_7.pages.BasePage import BasePage
+from .BasePage import BasePage
 
 
 class Product:

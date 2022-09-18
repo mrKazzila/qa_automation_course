@@ -1,6 +1,6 @@
 import allure
 
-from homework_7.pages.MainPage import MainPage
+from pages.MainPage import MainPage
 
 
 @allure.step('Проверка названия страницы')

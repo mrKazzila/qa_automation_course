@@ -12,7 +12,6 @@ drivers = os.path.expanduser("drivers")
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome")
     parser.addoption("--executor", action="store", default="192.168.0.179")
-
     parser.addoption("--vnc", action="store_true", default=False)
     parser.addoption("--logs", action="store_true", default=False)
     parser.addoption("--video", action="store_true", default=True)

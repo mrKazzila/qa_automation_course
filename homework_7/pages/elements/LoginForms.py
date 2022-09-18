@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
-from homework_7.pages.BasePage import BasePage
-from homework_7.pages.elements.LoginData import Admin, User
+from .LoginData import Admin, User
+from ..BasePage import BasePage
 
 
 class UserLoginForm(BasePage):
