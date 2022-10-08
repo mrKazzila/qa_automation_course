@@ -1,6 +1,6 @@
 import csv
 import json
-from typing import NoReturn, List
+from typing import List, NoReturn
 
 from settings import CountInfo
 
