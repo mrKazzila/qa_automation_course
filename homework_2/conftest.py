@@ -1,37 +1,37 @@
 import pytest
 
-from homework_2.src.Triangle import Triangle
-from homework_2.src.Square import Square
-from homework_2.src.Rectangle import Rectangle
-from homework_2.src.Circle import Circle
+from src.Triangle import Triangle
+from src.Square import Square
+from src.Rectangle import Rectangle
+from src.Circle import Circle
 
-from homework_2.tests.FakeFigure import FakeFigure
+from tests.FakeFigure import FakeFigure
 
 
 @pytest.fixture()
 def create_triangle():
-    triangle = Triangle(13, 14, 15)
+    triangle = Triangle(side_a=13, side_b=14, side_c=15)
     yield triangle
     del triangle
 
 
 @pytest.fixture()
 def create_square():
-    square = Square(10)
+    square = Square(side=10)
     yield square
     del square
 
 
 @pytest.fixture()
 def create_rectangle():
-    rectangle = Rectangle(5, 8)
+    rectangle = Rectangle(side_a=5, side_b=8)
     yield rectangle
     del rectangle
 
 
 @pytest.fixture()
 def create_circle():
-    circle = Circle(8)
+    circle = Circle(radius=8)
     yield circle
     del circle
 

@@ -1,6 +1,7 @@
 import pytest
-from homework_2.src.Figure import Figure, ImpossibleFigureError
-from homework_2.src.Circle import Circle
+
+from src.Circle import Circle
+from src.Figure import Figure, ImpossibleFigureError
 
 
 @pytest.mark.smoke
@@ -48,9 +49,9 @@ def test_fake_circle_init(create_fake_figure):
 
 def test_create_circle_bad_radius():
     with pytest.raises(ImpossibleFigureError):
-        Circle(-13)
+        Circle(radius=-13)
 
 
 def test_create_circle_radius_is_0():
     with pytest.raises(ImpossibleFigureError):
-        Circle(0)
+        Circle(radius=0)

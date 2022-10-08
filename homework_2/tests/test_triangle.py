@@ -1,6 +1,7 @@
 import pytest
-from homework_2.src.Figure import Figure, ImpossibleFigureError
-from homework_2.src.Triangle import Triangle
+
+from src.Figure import Figure, ImpossibleFigureError
+from src.Triangle import Triangle
 
 
 @pytest.mark.smoke
@@ -48,9 +49,9 @@ def test_fake_triangle_init(create_fake_figure):
 
 def test_create_triangle_bad_side():
     with pytest.raises(ImpossibleFigureError):
-        Triangle(13, -14, -15)
+        Triangle(side_a=13, side_b=-14, side_c=-15)
 
 
 def test_create_triangle_sides_is_0():
     with pytest.raises(ImpossibleFigureError):
-        Triangle(0, 0, 0)
+        Triangle(side_a=0, side_b=0, side_c=0)

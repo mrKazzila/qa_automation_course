@@ -1,6 +1,7 @@
 import pytest
-from homework_2.src.Figure import Figure, ImpossibleFigureError
-from homework_2.src.Square import Square
+
+from src.Figure import Figure, ImpossibleFigureError
+from src.Square import Square
 
 
 @pytest.mark.smoke
@@ -48,9 +49,9 @@ def test_fake_square_init(create_fake_figure):
 
 def test_create_square_bad_side():
     with pytest.raises(ImpossibleFigureError):
-        Square(-13)
+        Square(side=-13)
 
 
 def test_create_square_side_is_0():
     with pytest.raises(ImpossibleFigureError):
-        Square(0)
+        Square(side=0)
