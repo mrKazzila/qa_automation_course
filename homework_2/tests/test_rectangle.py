@@ -1,6 +1,7 @@
 import pytest
-from homework_2.src.Figure import Figure, ImpossibleFigureError
-from homework_2.src.Rectangle import Rectangle
+
+from src.Figure import Figure, ImpossibleFigureError
+from src.Rectangle import Rectangle
 
 
 @pytest.mark.smoke
@@ -48,9 +49,9 @@ def test_fake_rectangle_init(create_fake_figure):
 
 def test_create_rectangle_bad_side():
     with pytest.raises(ImpossibleFigureError):
-        Rectangle(13, -14)
+        Rectangle(side_a=13, side_b=-14)
 
 
 def test_create_rectangle_sides_is_0():
     with pytest.raises(ImpossibleFigureError):
-        Rectangle(0, 0)
+        Rectangle(side_a=0, side_b=0)
