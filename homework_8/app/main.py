@@ -1,3 +1,4 @@
+import traceback as tb
 from functools import wraps
 
 from helpers import create_file, generate_result_file_name, ReportCreator
@@ -7,9 +8,12 @@ def exception_decorator(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         try:
+            print('Start')
             func(*args, **kwargs)
-        except Exception as e:
-            print(e)
+            print('Done!')
+        except Exception as error:
+            trace = tb.format_exception(type(error), error, error.__traceback__)
+            print('\n'.join(trace))
 
     return wrapper
 
