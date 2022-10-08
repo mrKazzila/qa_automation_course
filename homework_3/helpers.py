@@ -1,10 +1,11 @@
-import json
 import csv
+import json
+from typing import NoReturn, List
 
-from homework_3.settings import CountInfo
+from settings import CountInfo
 
 
-def read_data_with_users(file_name: str = "data/users.json"):
+def read_data_with_users(file_name: str) -> List[dict]:
     """
     Читаем файл с данными пользователей
 
@@ -26,7 +27,7 @@ def read_data_with_users(file_name: str = "data/users.json"):
         ]
 
 
-def read_data_with_books(file_name: str = "data/books.csv"):
+def read_data_with_books(file_name: str) -> List[dict]:
     """
     Читаем файл с информацией о книгах
 
@@ -47,7 +48,7 @@ def read_data_with_books(file_name: str = "data/books.csv"):
         ]
 
 
-def create_json(data: list, file_path: str):
+def create_json(data: list, file_path: str) -> NoReturn:
     """
     Формируем json файл c результатами
 
@@ -56,6 +57,7 @@ def create_json(data: list, file_path: str):
     """
     with open(file_path, 'w', encoding='utf-8') as jf:
         json.dump(data, jf, indent=3, ensure_ascii=False)
+    print(f'Result file "{file_path}" was created!')
 
 
 def dict_maker(users: list, books: list) -> list:
