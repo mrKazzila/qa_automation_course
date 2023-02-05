@@ -16,7 +16,7 @@ def result_creator(data_count: dict, method_count: dict,
         **data_count,
         **method_count,
         **popular_ip,
-        **longest_requests
+        **longest_requests,
     }
 
 
@@ -36,23 +36,23 @@ def file_parse(log_file: str) -> dict:
         data_count=dict(count=len(parse_data)),
         method_count=get_method_count(data=parse_data),
         popular_ip=get_ip_count(data=parse_data),
-        longest_requests=get_longest_requests(data=parse_data)
+        longest_requests=get_longest_requests(data=parse_data),
     )
 
 
 def parse_line(line: str) -> Data:
-    REGEX_METHOD = re.compile(r'(POST|GET|PUT|DELETE|HEAD|CONNECT|OPTIONS|TRACE|PATCH)')
-    REGEX_IP_ADDRESS = re.compile(r'(\d{1,3}\.){3}\d{1,3}')
-    REGEX_URL = re.compile(r'"(http[s]?:\/\/.+)" "')
-    REGEX_DATE_TIME = re.compile(r'\[(.+) \+\d{4}\]')
-    REGEX_DURATION = re.compile(r'\d+$')
+    regex_method = re.compile(r'(POST|GET|PUT|DELETE|HEAD|CONNECT|OPTIONS|TRACE|PATCH)')
+    regex_ip_address = re.compile(r'(\d{1,3}\.){3}\d{1,3}')
+    regex_url = re.compile(r'"(http[s]?:\/\/.+)" "')
+    regex_date_time = re.compile(r'\[(.+) \+\d{4}\]')
+    regex_duration = re.compile(r'\d+$')
 
     return Data(
-        method_=get_method_match(line=line, regex_=REGEX_METHOD),
-        ip_=get_ip_address_match(line=line, regex_=REGEX_IP_ADDRESS),
-        url_=get_url_match(line=line, regex_=REGEX_URL),
-        date_time_=get_time_match(line=line, regex_=REGEX_DATE_TIME),
-        duration_=duration_match(line=line, regex_=REGEX_DURATION)
+        method_=get_method_match(line=line, regex_=regex_method),
+        ip_=get_ip_address_match(line=line, regex_=regex_ip_address),
+        url_=get_url_match(line=line, regex_=regex_url),
+        date_time_=get_time_match(line=line, regex_=regex_date_time),
+        duration_=duration_match(line=line, regex_=regex_duration),
     )
 
 

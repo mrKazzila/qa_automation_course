@@ -9,19 +9,19 @@ def pytest_addoption(parser):
         "--drivers",
         default=os.path.expanduser("drivers"),
         help="This is default path with drivers",
-        action="store"
+        action="store",
     )
     parser.addoption(
         "--browser",
         default="chrome",
         help="This is default browser",
-        action="store"
+        action="store",
     )
     parser.addoption(
         "--url",
         default="http://192.168.0.179:8081/",
         help='This is default url',
-        action="store"
+        action="store",
     )
 
 

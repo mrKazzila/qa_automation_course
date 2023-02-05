@@ -11,7 +11,7 @@ def test_triangle_init(create_triangle):
 
 @pytest.mark.smoke
 def test_create_triangle(create_triangle):
-    assert create_triangle.name is "Triangle"
+    assert create_triangle.name == "Triangle"
 
 
 @pytest.mark.smoke

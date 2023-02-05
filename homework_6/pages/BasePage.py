@@ -1,5 +1,5 @@
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.remote import webdriver, webelement
@@ -14,7 +14,7 @@ class BasePage:
     def _wait_title_contain(self, text: str, timeout: float = 3) -> NoReturn:
         try:
             WebDriverWait(self.driver, timeout).until(
-                EC.title_contains(text)
+                ec.title_contains(text),
             )
         except TimeoutException:
             raise AssertionError(f'Not wait {text} in page title')
@@ -22,7 +22,7 @@ class BasePage:
     def _wait_element(self, locator: tuple, timeout: float = 10) -> webelement:
         try:
             return WebDriverWait(self.driver, timeout).until(
-                EC.visibility_of_element_located(locator)
+                ec.visibility_of_element_located(locator),
             )
         except TimeoutException:
             raise AssertionError(f'Not wait {locator} in page')
@@ -30,7 +30,7 @@ class BasePage:
     def _wait_elements(self, locator: tuple, timeout: float = 10) -> webelement:
         try:
             return WebDriverWait(self.driver, timeout).until(
-                EC.visibility_of_all_elements_located(locator)
+                ec.visibility_of_all_elements_located(locator),
             )
         except TimeoutException:
             raise AssertionError(f'Not wait {locator} in page')
@@ -44,4 +44,3 @@ class BasePage:
 
     def _accept_allert(self) -> NoReturn:
         self.driver.switch_to.alert.accept()
-

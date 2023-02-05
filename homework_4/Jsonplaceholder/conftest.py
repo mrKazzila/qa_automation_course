@@ -11,7 +11,7 @@ def post_data():
     return dict(
         userId=1,
         title='foo',
-        body='bar'
+        body='bar',
     )
 
 

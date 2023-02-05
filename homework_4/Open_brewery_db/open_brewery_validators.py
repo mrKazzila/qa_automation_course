@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 
 class SingleBreweryValidator(BaseModel):
-    id: str
+    id: str  # noqa A003
     brewery_type: str
     name: str
     street: Union[None, str]

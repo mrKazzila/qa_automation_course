@@ -21,7 +21,7 @@ def read_data_with_users(file_name: str) -> List[dict]:
                 "gender": user.get("gender"),
                 "address": user.get("address"),
                 "age": user.get("age"),
-                "books": []
+                "books": [],
             }
             for user in users
         ]
@@ -42,7 +42,7 @@ def read_data_with_books(file_name: str) -> List[dict]:
                 "title": book.get('Title'),
                 "author": book.get('Author'),
                 "pages": book.get('Pages'),
-                "genre": book.get('Genre')
+                "genre": book.get('Genre'),
             }
             for book in books
         ]

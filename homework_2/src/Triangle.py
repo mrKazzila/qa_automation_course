@@ -21,7 +21,7 @@ class Triangle(Figure):
     def area(self) -> float:
         half_meter = self.perimeter / 2
         return sqrt(
-            half_meter * ((half_meter - self.__side_a) * (half_meter - self.__side_b) * (half_meter - self.__side_c))
+            half_meter * ((half_meter - self.__side_a) * (half_meter - self.__side_b) * (half_meter - self.__side_c)),
         )
 
     @property

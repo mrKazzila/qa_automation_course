@@ -36,7 +36,7 @@ def test_create_resource(base_url, header, post_data):
     response = requests.post(
         url=f'{base_url}/posts',
         headers=header,
-        json=post_data
+        json=post_data,
     )
     assert TestSchemaValidator.parse_raw(response.text)
 
@@ -51,6 +51,6 @@ def test_create_resource(base_url, header, post_data):
 def test_users_nested(base_url, start_routes, end_routes, expected_count):
     for page_id in range(1, 11):
         response = requests.get(
-            url=f'{base_url}{start_routes}{page_id}{end_routes}'
+            url=f'{base_url}{start_routes}{page_id}{end_routes}',
         ).json()
         assert len(response) == expected_count

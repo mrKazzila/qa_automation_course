@@ -13,7 +13,7 @@ class FileManager:
 
     @staticmethod
     def get_path_with_log_files(path: str) -> Tuple[str, str]:
-        for root, dirs, files in os.walk(path, topdown=False):
+        for root, _dirs, files in os.walk(path, topdown=False):
             for name in files:
                 if name.endswith('.log'):
                     yield os.path.normpath(os.path.join(root, name)), name

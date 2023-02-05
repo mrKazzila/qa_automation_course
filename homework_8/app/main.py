@@ -22,7 +22,7 @@ def exception_decorator(func):
 def main():
     create_file(
         file_name=generate_result_file_name(),
-        result_info=ReportCreator().report()
+        result_info=ReportCreator().report(),
     )
 
 

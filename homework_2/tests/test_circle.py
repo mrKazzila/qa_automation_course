@@ -11,7 +11,7 @@ def test_circle_init(create_circle):
 
 @pytest.mark.smoke
 def test_create_circle(create_circle):
-    assert create_circle.name is "Circle"
+    assert create_circle.name == "Circle"
 
 
 @pytest.mark.smoke

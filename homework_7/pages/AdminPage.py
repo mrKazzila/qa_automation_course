@@ -52,7 +52,7 @@ class AdminPage(BasePage):
 
     @allure.step
     def add_new_product_info(self):
-        self.logger.info(f'Add product info')
+        self.logger.info('Add product info')
         self._wait_element(self.PRODUCT_NAME).send_keys(Product.NAME)
         self._wait_element(self.PRODUCT_METE_TAG_TITLE).send_keys(Product.METE_TAG_TITLE)
         self._click(self.DATA_TAB)
@@ -68,7 +68,7 @@ class AdminPage(BasePage):
 
     @allure.step
     def delete_product(self):
-        self.logger.info(f'Delete product')
+        self.logger.info('Delete product')
         self._click(self.SELECT_PRODUCT)
         self._click(self.PRODUCT_DELETE_BTN)
         self._accept_allert()

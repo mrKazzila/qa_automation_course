@@ -29,4 +29,3 @@ def test_main_page_goods(driver, base_url):
 def test_switch_currency(driver, base_url):
     driver.get(base_url)
     MainPage(driver).switch_currency()
-

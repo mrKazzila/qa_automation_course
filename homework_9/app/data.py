@@ -6,7 +6,7 @@ Data = namedtuple(
     "ip_,"
     "url_,"
     "date_time_,"
-    "duration_"
+    "duration_",
 )
 
 methods = {
@@ -18,5 +18,5 @@ methods = {
     "DELETE": 0,
     "CONNECT": 0,
     "TRACE": 0,
-    "PATCH": 0
+    "PATCH": 0,
 }

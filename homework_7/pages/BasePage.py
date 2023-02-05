@@ -8,7 +8,7 @@ import allure
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.remote import webdriver, webelement
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -37,12 +37,12 @@ class BasePage:
         try:
             self.logger.info(f'Wait page title: {text}')
             WebDriverWait(self.driver, timeout).until(
-                EC.title_contains(text)
+                ec.title_contains(text),
             )
         except TimeoutException:
             allure.attach(
                 body=self.driver.get_screenshot_as_png(),
-                name=f'FAILED Not found title with text {text}'
+                name=f'FAILED Not found title with text {text}',
             )
             raise AssertionError(f'Not wait {text} in page title')
 
@@ -51,12 +51,12 @@ class BasePage:
         try:
             self.logger.info(f'Wait element: {locator}')
             return WebDriverWait(self.driver, timeout).until(
-                EC.visibility_of_element_located(locator)
+                ec.visibility_of_element_located(locator),
             )
         except TimeoutException:
             allure.attach(
                 body=self.driver.get_screenshot_as_png(),
-                name=f'FAILED Not found element with locator={locator}'
+                name=f'FAILED Not found element with locator={locator}',
             )
             raise AssertionError(f'Not wait {locator} in page')
 
@@ -65,12 +65,12 @@ class BasePage:
         try:
             self.logger.info(f'Wait elements: {locator}')
             return WebDriverWait(self.driver, timeout).until(
-                EC.visibility_of_all_elements_located(locator)
+                ec.visibility_of_all_elements_located(locator),
             )
         except TimeoutException:
             allure.attach(
                 body=self.driver.get_screenshot_as_png(),
-                name=f'FAILED Not found {locator}'
+                name=f'FAILED Not found {locator}',
             )
             raise AssertionError(f'Not wait {locator} in page')
 
@@ -98,10 +98,10 @@ class BasePage:
             except Exception as error:
                 allure.attach(
                     body=BasePage(kwargs.get('driver')).driver.get_screenshot_as_png(),
-                    name=f'{funk.__name__}_error'
+                    name=f'{funk.__name__}_error',
                 )
                 BasePage(kwargs.get('driver')).logger.error(
-                    f'{tb.format_exception(type(error), error, error.__traceback__)}'
+                    f'{tb.format_exception(type(error), error, error.__traceback__)}',
                 )
                 raise error
 

@@ -27,7 +27,7 @@ class MainPage(BasePage):
     CURRENCY_DATA = (
         CURRENCY(name=EUR, check=IS_EUR_CURRENCY),
         CURRENCY(name=GBP, check=IS_GBP_CURRENCY),
-        CURRENCY(name=USD, check=IS_USD_CURRENCY)
+        CURRENCY(name=USD, check=IS_USD_CURRENCY),
     )
 
     @allure.step

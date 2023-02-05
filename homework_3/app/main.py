@@ -9,12 +9,12 @@ from helpers import (
     create_json,
     dict_maker,
     read_data_with_books,
-    read_data_with_users
+    read_data_with_users,
 )
 from settings import (
     DEFAULT_PATH_BOOKS_FILE,
     DEFAULT_PATH_RESULT_FILE,
-    DEFAULT_PATH_USERS_FILE
+    DEFAULT_PATH_USERS_FILE,
 )
 
 
@@ -49,12 +49,12 @@ def main():
 
     result = dict_maker(
         users=users,
-        books=books
+        books=books,
     )
 
     create_json(
         data=result,
-        file_path=result_file_path
+        file_path=result_file_path,
     )
 
 

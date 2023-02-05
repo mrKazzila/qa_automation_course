@@ -48,7 +48,8 @@ def driver(request):
             browser = webdriver.Firefox(executable_path=f'{drivers}/geckodriver')
         elif driver == "opera":
             browser = webdriver.Opera(
-                executable_path=f'{drivers}/operadriver', options=options
+                executable_path=f'{drivers}/operadriver',
+                options=options,
             )
         else:
             raise ValueError(f"Browser {driver} not supported!")
@@ -59,21 +60,21 @@ def driver(request):
             "selenoid:options": {
                 "enableVNC": vnc,
                 "enableVideo": video,
-                "enableLog": logs
+                "enableLog": logs,
             },
-            "name": "OtusQAPython"
+            "name": "OtusQAPython",
         }
 
         browser = webdriver.Remote(
             desired_capabilities=capabilities,
             command_executor=executor_url,
-            options=options
+            options=options,
         )
 
     allure.attach(
         name=browser.session_id,
         body=json.dumps(browser.capabilities),
-        attachment_type=allure.attachment_type.JSON
+        attachment_type=allure.attachment_type.JSON,
     )
 
     def finalizer():
@@ -94,7 +95,7 @@ def driver(request):
                             <value>{executor_url}</value>
                         </parameter>
                     </environment>
-                    """
+                    """,
             )
 
     browser.maximize_window()

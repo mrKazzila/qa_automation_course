@@ -3,7 +3,7 @@ import requests
 
 from dog_api_validators import (
     AllBreedsValidator,
-    RandomDogImageValidator
+    RandomDogImageValidator,
 )
 
 

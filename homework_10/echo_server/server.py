@@ -58,11 +58,11 @@ with socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM) as server_:
                         response_line,
                         f'Content-Length: {len(body)}',
                         'Content-Type: text/html',
-                        *request_headers
+                        *request_headers,
                     ])
                     response = '\r\n\r\n'.join([
                         headers,
-                        body
+                        body,
                     ])
 
                     conn.send(response.encode('utf-8'))
