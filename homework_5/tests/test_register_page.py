@@ -5,10 +5,10 @@ from selenium.webdriver.common.by import By
 class RegisterPage:
     ADD_URL: str = 'index.php?route=account/register'
     TITLE: str = 'Register Account'
-    NAME_FIELD: tuple = (By.CSS_SELECTOR, "input[type='text'][name='firstname']")
-    CONTINUE_BUTTON: tuple = (By.CSS_SELECTOR, "input[type='submit'][value='Continue']")
-    PRIVACY_CHECKBOX_BTN: tuple = (By.CSS_SELECTOR, "input[type='checkbox'][name='agree']")
-    SUBSCRIBE_BTN: tuple = (By.CSS_SELECTOR, "input[type='radio'][name='newsletter']")
+    NAME_FIELD: tuple = (By.CSS_SELECTOR, 'input[type="text"][name="firstname"]')
+    CONTINUE_BUTTON: tuple = (By.CSS_SELECTOR, 'input[type="submit"][value="Continue"]')
+    PRIVACY_CHECKBOX_BTN: tuple = (By.CSS_SELECTOR, 'input[type="checkbox"][name="agree"]')
+    SUBSCRIBE_BTN: tuple = (By.CSS_SELECTOR, 'input[type="radio"][name="newsletter"]')
 
 
 def test_register_page_title(driver, base_url):

@@ -3,12 +3,12 @@ from selenium.webdriver.common.by import By
 
 
 class CartPage:
-    ADD_URL: str = r"index.php?route=checkout/cart"
+    ADD_URL: str = r'index.php?route=checkout/cart'
     TITLE: str = 'Shopping Cart'
-    LOGO: tuple = (By.CSS_SELECTOR, "img[title='Your Store']")
-    SEARCH: tuple = (By.CSS_SELECTOR, "input[name='search']")
-    CONTENT_FIELD: tuple = (By.CSS_SELECTOR, "div[id='content']")
-    CONTINUE_BTN: tuple = (By.CSS_SELECTOR, "div[class='pull-right']")
+    LOGO: tuple = (By.CSS_SELECTOR, 'img[title="Your Store"]')
+    SEARCH: tuple = (By.CSS_SELECTOR, 'input[name="search"]')
+    CONTENT_FIELD: tuple = (By.CSS_SELECTOR, 'div[id="content"]')
+    CONTINUE_BTN: tuple = (By.CSS_SELECTOR, 'div[class="pull-right"]')
 
 
 def test_cart_page_title(driver, base_url):

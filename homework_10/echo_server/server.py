@@ -8,7 +8,7 @@ from random import randint
 
 
 class ServerInfo:
-    LOCALHOST: str = "127.0.0.1"
+    LOCALHOST: str = '127.0.0.1'
     PORT_: int = randint(20000, 30000)
 
 
@@ -28,11 +28,11 @@ with socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM) as server_:
                 try:
                     bytes_info = conn.recv(1024)
                     decode_data = bytes_info.decode('utf-8', errors='ignore')
-                    print(f"Get data:\n'{decode_data}'\nfrom: {addr}")
+                    print(f'Get data:\n"{decode_data}"\nfrom: {addr}')
 
-                    request_data = decode_data.split("\r\n")
+                    request_data = decode_data.split('\r\n')
                     request_status_line = request_data[0]
-                    request_method = request_data[0].split(" ")[0]
+                    request_method = request_data[0].split(' ')[0]
                     request_headers = request_data[1:-2]
                     try:
                         status = int(request_status_line.split('status=')[1].split(' HTTP')[0])

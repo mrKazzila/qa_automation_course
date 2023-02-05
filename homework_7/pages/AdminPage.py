@@ -18,28 +18,28 @@ class AdminPage(BasePage):
     ADD_URL: str = 'admin/'
 
     TITLE: str = 'Administration'
-    USERNAME_FIELD: tuple = (By.CSS_SELECTOR, "input[name='username']")
-    PASSWORD_FIELD: tuple = (By.CSS_SELECTOR, "input[name='password']")
-    LOGIN_BTN: tuple = (By.CSS_SELECTOR, "button[type='submit']")
-    FORGOTTEN_BTN: tuple = (By.CSS_SELECTOR, "span[class='help-block']")
+    USERNAME_FIELD: tuple = (By.CSS_SELECTOR, 'input[name="username"]')
+    PASSWORD_FIELD: tuple = (By.CSS_SELECTOR, 'input[name="password"]')
+    LOGIN_BTN: tuple = (By.CSS_SELECTOR, 'button[type="submit"]')
+    FORGOTTEN_BTN: tuple = (By.CSS_SELECTOR, 'span[class="help-block"]')
 
     CATALOG_BTN: tuple = (By.LINK_TEXT, 'Catalog')
-    PRODUCT_BTN: tuple = (By.LINK_TEXT, "Products")
+    PRODUCT_BTN: tuple = (By.LINK_TEXT, 'Products')
     ADD_NEW_PRODUCT_BTN: tuple = (By.CSS_SELECTOR, '[data-original-title="Add New"]')
 
-    PRODUCT_NAME: tuple = (By.CSS_SELECTOR, "input[name='product_description[1][name]']")
-    PRODUCT_METE_TAG_TITLE: tuple = (By.CSS_SELECTOR, "input[name='product_description[1][meta_title]']")
+    PRODUCT_NAME: tuple = (By.CSS_SELECTOR, 'input[name="product_description[1][name]"]')
+    PRODUCT_METE_TAG_TITLE: tuple = (By.CSS_SELECTOR, 'input[name="product_description[1][meta_title]"]')
     DATA_TAB: tuple = (By.LINK_TEXT, 'Data')
-    MODEL: tuple = (By.CSS_SELECTOR, "input[name='model']")
-    PRICE: tuple = (By.CSS_SELECTOR, "input[name='price']")
+    MODEL: tuple = (By.CSS_SELECTOR, 'input[name="model"]')
+    PRICE: tuple = (By.CSS_SELECTOR, 'input[name="price"]')
     SAVE_BTN: tuple = (By.CSS_SELECTOR, '[data-original-title="Save"]')
 
-    FILTER_BY_NAME_FIELD: tuple = (By.CSS_SELECTOR, "input[name='filter_name']")
-    FILTER_BTN: tuple = (By.CSS_SELECTOR, "button[id='button-filter']")
-    PRODUCT_FIND: tuple = (By.CSS_SELECTOR, "td[class='text-center']")
-    NO_RESULT: tuple = (By.XPATH, "//td[contains(text(),'No results!')]")
+    FILTER_BY_NAME_FIELD: tuple = (By.CSS_SELECTOR, 'input[name="filter_name"]')
+    FILTER_BTN: tuple = (By.CSS_SELECTOR, 'button[id="button-filter"]')
+    PRODUCT_FIND: tuple = (By.CSS_SELECTOR, 'td[class="text-center"]')
+    NO_RESULT: tuple = (By.XPATH, '//td[contains(text(),"No results!")]')
 
-    SELECT_PRODUCT: tuple = (By.CSS_SELECTOR, "input[name='selected[]']")
+    SELECT_PRODUCT: tuple = (By.CSS_SELECTOR, 'input[name="selected[]"]')
     PRODUCT_DELETE_BTN: tuple = (By.CSS_SELECTOR, '.btn-danger')
 
     @allure.step
@@ -75,8 +75,8 @@ class AdminPage(BasePage):
 
     @allure.step
     def check_add_product(self):
-        assert len(self._wait_elements(self.PRODUCT_FIND)) > 3, "Product not added!"
+        assert len(self._wait_elements(self.PRODUCT_FIND)) > 3, 'Product not added!'
 
     @allure.step
     def check_del_product(self):
-        assert self._wait_element(self.NO_RESULT).text == "No results!", "Product not deleted!"
+        assert self._wait_element(self.NO_RESULT).text == 'No results!', 'Product not deleted!'

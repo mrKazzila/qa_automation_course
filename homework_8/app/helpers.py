@@ -5,12 +5,12 @@ from comands import PsAuxParser
 
 
 def generate_result_file_name() -> str:
-    date_format = datetime.now().strftime("%d-%m-%Y-%H:%M")
+    date_format = datetime.now().strftime('%d-%m-%Y-%H:%M')
     return f'{date_format}-scan.txt'
 
 
 def create_file(file_name: str, result_info) -> NoReturn:
-    with open(file_name, "w") as result_file:
+    with open(file_name, 'w') as result_file:
         result_file.write(result_info)
 
 
@@ -19,7 +19,7 @@ class ReportCreator(PsAuxParser):
 
     @property
     def get_system_users(self) -> str:
-        return ", ".join(self._get_unique_users())
+        return ', '.join(self._get_unique_users())
 
     @property
     def get_count_process(self) -> int:
@@ -27,8 +27,8 @@ class ReportCreator(PsAuxParser):
 
     @property
     def get_users_process(self) -> str:
-        return " ".join([
-            f"{user} : {self._get_count_users()[user]},{self.INDENT}"
+        return ' '.join([
+            f'{user} : {self._get_count_users()[user]},{self.INDENT}'
             for user in self._get_unique_users()
         ])
 
@@ -57,11 +57,11 @@ class ReportCreator(PsAuxParser):
         return round(self._cpu_usages_info()[self._get_max_cpu_data()], 2)
 
     def report(self) -> str:
-        return f"Пользователи системы: {self.get_system_users}\n" \
-               f"Процессов запущено: {self.get_count_process}\n" \
-               f"Пользовательских процессов: {self.INDENT} {self.get_users_process}\n" \
-               f"Всего памяти используется: {self.get_all_cpu_usage} Mb\n" \
-               f"Всего CPU используется: {self.get_all_mem_usage}%\n" \
-               f"Больше всего памяти использует: " \
-               f"'{self.biggest_mem_process_name}' - {self.biggest_mem_process_count}Mb\n" \
-               f"Больше всего CPU использует: '{self.biggest_cpu_process_name}' - {self.biggest_cpu_process_count}%\n"
+        return f'Пользователи системы: {self.get_system_users}\n' \
+               f'Процессов запущено: {self.get_count_process}\n' \
+               f'Пользовательских процессов: {self.INDENT} {self.get_users_process}\n' \
+               f'Всего памяти используется: {self.get_all_cpu_usage} Mb\n' \
+               f'Всего CPU используется: {self.get_all_mem_usage}%\n' \
+               f'Больше всего памяти использует: ' \
+               f'"{self.biggest_mem_process_name}" - {self.biggest_mem_process_count}Mb\n' \
+               f'Больше всего CPU использует: "{self.biggest_cpu_process_name}" - {self.biggest_cpu_process_count}%\n'

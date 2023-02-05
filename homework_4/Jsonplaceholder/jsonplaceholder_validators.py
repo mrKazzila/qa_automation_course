@@ -19,5 +19,5 @@ class TestSchemaValidator(BaseModel):
         values_list = [1, 'foo', 'bar', 101]
         for value in values.values():
             if value not in values_list:
-                raise ValueError("Not correct data")
+                raise ValueError('Not correct data')
             return values

@@ -28,16 +28,16 @@ def main():
     args = parser.parse_args()
 
     logs_path = args.logs_path
-    print(f"Variable for the path to the artifacts folder: {logs_path}")
+    print(f'Variable for the path to the artifacts folder: {logs_path}')
     FileManager.check_file_exist(file_path=logs_path)
 
     output_file_path = args.output_file_path or FileManager.create_result_file_name()
-    print(f"Variable for the output file: {output_file_path}")
+    print(f'Variable for the output file: {output_file_path}')
     is_file = helpers.check_is_file(log_path=logs_path)
 
     log_info = helpers.file_parse(logs_path) if is_file else helpers.parse_dir(logs_path)
     FileManager.writer(output_file_path, log_info)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

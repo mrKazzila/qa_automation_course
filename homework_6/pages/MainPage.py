@@ -8,18 +8,18 @@ from homework_6.pages.BasePage import BasePage
 class MainPage(BasePage):
     TITLE: str = 'Your Store'
 
-    LOGO: tuple = (By.CSS_SELECTOR, "img[title='Your Store']")
-    CART: tuple = (By.CSS_SELECTOR, "div[class='btn-group btn-block']")
-    SEARCH: tuple = (By.CSS_SELECTOR, "input[name='search']")
-    SLIDE_SHOW: tuple = (By.CSS_SELECTOR, "div[class='swiper-wrapper']")
+    LOGO: tuple = (By.CSS_SELECTOR, 'img[title="Your Store"]')
+    CART: tuple = (By.CSS_SELECTOR, 'div[class="btn-group btn-block"]')
+    SEARCH: tuple = (By.CSS_SELECTOR, 'input[name="search"]')
+    SLIDE_SHOW: tuple = (By.CSS_SELECTOR, 'div[class="swiper-wrapper"]')
 
     CURRENCY_BTN: tuple = (By.CSS_SELECTOR, '[class="fa fa-caret-down"]')
 
-    EUR: tuple = (By.NAME, "EUR")
+    EUR: tuple = (By.NAME, 'EUR')
     IS_EUR_CURRENCY: tuple = (By.XPATH, '//strong[text()="€"]')
-    GBP: tuple = (By.NAME, "GBP")
+    GBP: tuple = (By.NAME, 'GBP')
     IS_GBP_CURRENCY: tuple = (By.XPATH, '//strong[text()="£"]')
-    USD: tuple = (By.NAME, "USD")
+    USD: tuple = (By.NAME, 'USD')
     IS_USD_CURRENCY: tuple = (By.XPATH, '//strong[text()="$"]')
 
     CURRENCY = namedtuple('Currency', 'name, check')

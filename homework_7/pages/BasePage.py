@@ -20,9 +20,9 @@ class BasePage:
 
     def __config_logger(self, to_file: bool = False):
         self.logger = logging.getLogger(type(self).__name__)
-        os.makedirs("logs", exist_ok=True)
+        os.makedirs('logs', exist_ok=True)
         if to_file:
-            file_handler = logging.FileHandler(f"logs/{self.driver.test_name}.log")
+            file_handler = logging.FileHandler(f'logs/{self.driver.test_name}.log')
             file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
             self.logger.addHandler(file_handler)
         self.logger.setLevel(level=self.driver.log_level)

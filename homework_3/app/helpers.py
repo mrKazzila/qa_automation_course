@@ -17,11 +17,11 @@ def read_data_with_users(file_name: str) -> List[dict]:
 
         return [
             {
-                "name": user.get("name"),
-                "gender": user.get("gender"),
-                "address": user.get("address"),
-                "age": user.get("age"),
-                "books": [],
+                'name': user.get('name'),
+                'gender': user.get('gender'),
+                'address': user.get('address'),
+                'age': user.get('age'),
+                'books': [],
             }
             for user in users
         ]
@@ -39,10 +39,10 @@ def read_data_with_books(file_name: str) -> List[dict]:
 
         return [
             {
-                "title": book.get('Title'),
-                "author": book.get('Author'),
-                "pages": book.get('Pages'),
-                "genre": book.get('Genre'),
+                'title': book.get('Title'),
+                'author': book.get('Author'),
+                'pages': book.get('Pages'),
+                'genre': book.get('Genre'),
             }
             for book in books
         ]
@@ -57,7 +57,7 @@ def create_json(data: list, file_path: str) -> NoReturn:
     """
     with open(file_path, 'w', encoding='utf-8') as jf:
         json.dump(data, jf, indent=3, ensure_ascii=False)
-    print(f'Result file "{file_path}" was created!')
+    print(f"Result file '{file_path}' was created!")
 
 
 def dict_maker(users: list, books: list) -> list:

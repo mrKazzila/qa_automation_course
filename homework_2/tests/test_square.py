@@ -10,7 +10,7 @@ def test_square_init(create_square):
 
 @pytest.mark.smoke
 def test_create_square(create_square):
-    assert create_square.name == "Square"
+    assert create_square.name == 'Square'
 
 
 @pytest.mark.smoke

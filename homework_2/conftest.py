@@ -36,6 +36,6 @@ def create_circle():
 
 @pytest.fixture()
 def create_fake_figure():
-    fake_figure = FakeFigure(fake_name="Triangle", some_side=8)
+    fake_figure = FakeFigure(fake_name='Triangle', some_side=8)
     yield fake_figure
     del fake_figure

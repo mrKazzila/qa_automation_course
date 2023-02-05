@@ -10,19 +10,19 @@ class UserPage(BasePage):
 
     TITLE: str = 'Register Account'
 
-    FIRST_NAME_FIELD: tuple = (By.CSS_SELECTOR, "input[type='text'][name='firstname']")
-    LAST_NAME_FIELD: tuple = (By.CSS_SELECTOR, "input[type='text'][name='lastname']")
-    EMAIL_FIELD: tuple = (By.CSS_SELECTOR, "input[type='email'][name='email']")
-    PHONE_FIELD: tuple = (By.CSS_SELECTOR, "input[type='tel'][name='telephone']")
+    FIRST_NAME_FIELD: tuple = (By.CSS_SELECTOR, 'input[type="text"][name="firstname"]')
+    LAST_NAME_FIELD: tuple = (By.CSS_SELECTOR, 'input[type="text"][name="lastname"]')
+    EMAIL_FIELD: tuple = (By.CSS_SELECTOR, 'input[type="email"][name="email"]')
+    PHONE_FIELD: tuple = (By.CSS_SELECTOR, 'input[type="tel"][name="telephone"]')
 
-    PASSWORD_FIELD: tuple = (By.CSS_SELECTOR, "input[type='password'][name='password']")
-    CONFIRM_PASSWORD_FIELD: tuple = (By.CSS_SELECTOR, "input[type='password'][name='confirm']")
+    PASSWORD_FIELD: tuple = (By.CSS_SELECTOR, 'input[type="password"][name="password"]')
+    CONFIRM_PASSWORD_FIELD: tuple = (By.CSS_SELECTOR, 'input[type="password"][name="confirm"]')
 
-    SUBSCRIBE_BTN: tuple = (By.CSS_SELECTOR, "input[type='radio'][name='newsletter']")
-    PRIVACY_CHECKBOX_BTN: tuple = (By.CSS_SELECTOR, "input[type='checkbox'][name='agree']")
-    CONTINUE_BUTTON: tuple = (By.CSS_SELECTOR, "input[type='submit'][value='Continue']")
+    SUBSCRIBE_BTN: tuple = (By.CSS_SELECTOR, 'input[type="radio"][name="newsletter"]')
+    PRIVACY_CHECKBOX_BTN: tuple = (By.CSS_SELECTOR, 'input[type="checkbox"][name="agree"]')
+    CONTINUE_BUTTON: tuple = (By.CSS_SELECTOR, 'input[type="submit"][value="Continue"]')
 
-    ACCEPT_REGISTRATION: tuple = (By.XPATH, "//h1[contains(text(),'Your Account Has Been Created!')]")
+    ACCEPT_REGISTRATION: tuple = (By.XPATH, '//h1[contains(text(),"Your Account Has Been Created!")]')
 
     @allure.step
     def input_user_data_in_field(self):

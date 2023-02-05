@@ -43,7 +43,7 @@ def file_parse(log_file: str) -> dict:
 def parse_line(line: str) -> Data:
     regex_method = re.compile(r'(POST|GET|PUT|DELETE|HEAD|CONNECT|OPTIONS|TRACE|PATCH)')
     regex_ip_address = re.compile(r'(\d{1,3}\.){3}\d{1,3}')
-    regex_url = re.compile(r'"(http[s]?:\/\/.+)" "')
+    regex_url = re.compile(r"(http[s]?:\/\/.+)' ")
     regex_date_time = re.compile(r'\[(.+) \+\d{4}\]')
     regex_duration = re.compile(r'\d+$')
 
@@ -84,13 +84,13 @@ def get_time_match(line: str, regex_: re) -> str:
 def get_method_count(data: dict) -> dict:
     for info in data.values():
         methods[info.method_] = methods.get(info.method_) + 1
-    return {"methods": methods}
+    return {'methods': methods}
 
 
 def get_ip_count(data: dict, top_: int = 3) -> dict:
     ip_s = Counter([info.ip_ for info in data.values()])
-    return {f"top_{top_}_ipS": sorted(ip_s.items(), key=lambda x: -x[1])[:top_]}
+    return {f'top_{top_}_ipS': sorted(ip_s.items(), key=lambda x: -x[1])[:top_]}
 
 
 def get_longest_requests(data: dict, top_: int = 10) -> dict:
-    return {f"top_{top_}_duration": sorted(data.values(), key=lambda x: -x.duration_)[:top_]}
+    return {f'top_{top_}_duration': sorted(data.values(), key=lambda x: -x.duration_)[:top_]}

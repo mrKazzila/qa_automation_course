@@ -43,7 +43,7 @@ def test_max_autocomplete_returned(base_url):
 @pytest.mark.parametrize('city', ['San Diego', 'Alameda'])
 def test_filter_by_city(base_url, city):
     result = requests.get(
-        url=f'{base_url}/breweries?by_city={city.replace(" ", "_").lower()}',
+        url=f"{base_url}/breweries?by_city={city.replace(' ', '_').lower()}",
     ).json()
     for brewery in result:
         assert brewery.get('city') == city

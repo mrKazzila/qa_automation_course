@@ -1,7 +1,7 @@
 from collections import Counter
 from subprocess import run
 
-PS_AUX = run(["ps", "aux"], capture_output=True)
+PS_AUX = run(['ps', 'aux'], capture_output=True)
 
 
 class PsAuxParser:

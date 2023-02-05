@@ -10,7 +10,7 @@ def test_rectangle_init(create_rectangle):
 
 @pytest.mark.smoke
 def test_create_rectangle(create_rectangle):
-    assert create_rectangle.name == "Rectangle"
+    assert create_rectangle.name == 'Rectangle'
 
 
 @pytest.mark.smoke

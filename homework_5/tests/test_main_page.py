@@ -4,10 +4,10 @@ from selenium.webdriver.common.by import By
 
 class MainPage:
     TITLE: str = 'Your Store'
-    LOGO: tuple = (By.CSS_SELECTOR, "img[title='Your Store']")
-    CART: tuple = (By.CSS_SELECTOR, "div[class='btn-group btn-block']")
-    SEARCH: tuple = (By.CSS_SELECTOR, "input[name='search']")
-    SLIDE_SHOW: tuple = (By.CSS_SELECTOR, "div[class='swiper-wrapper']")
+    LOGO: tuple = (By.CSS_SELECTOR, 'img[title="Your Store"]')
+    CART: tuple = (By.CSS_SELECTOR, 'div[class="btn-group btn-block"]')
+    SEARCH: tuple = (By.CSS_SELECTOR, 'input[name="search"]')
+    SLIDE_SHOW: tuple = (By.CSS_SELECTOR, 'div[class="swiper-wrapper"]')
 
 
 def test_main_page_title(driver, base_url):
