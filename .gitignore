@@ -130,13 +130,9 @@ dmypy.json
 
 # Local settings
 qaa_venv/
-venv/
 /homework_05/drivers/
 /homework_06/drivers/
 /homework_07/drivers/
 /homework_07/logs/
 /homework_07/allure-results/
 /homework_07/allure-report/
-/homework_11/drivers/
-/homework_11/allure-results/
-/homework_11/allure-report/
