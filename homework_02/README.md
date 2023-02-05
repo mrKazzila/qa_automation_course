@@ -41,7 +41,7 @@ qa_automation_course>pip install -r requirements.txt
 
 2. Переход в рабочую директорию.
 ```shell script
-qa_automation_course>cd homework_2
+qa_automation_course>cd homework_02
 ``` 
 
 3. Запуск тестов.

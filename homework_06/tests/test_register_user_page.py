@@ -1,4 +1,4 @@
-from homework_6.pages.UserPage import UserPage
+from homework_06.pages.UserPage import UserPage
 
 
 def test_register_page_title(driver, base_url):

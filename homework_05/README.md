@@ -40,10 +40,10 @@ qa_automation_course>pip install -r requirements.txt
 
 2. Переход в рабочую директорию.
 ```shell script
-qa_automation_course>cd homework_5
+qa_automation_course>cd homework_05
 ```
 
 3. Запуск скрипта
 ```shell script
-qa_automation_course/homework_5>pytest
+qa_automation_course/homework_05>pytest
 ```

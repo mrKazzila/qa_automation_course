@@ -1,4 +1,4 @@
-from homework_6.pages.MainPage import MainPage
+from homework_06.pages.MainPage import MainPage
 
 
 def test_main_page_title(driver, base_url):

@@ -1,5 +1,5 @@
-from homework_6.pages.AdminPage import AdminPage
-from homework_6.pages.elements.LoginForms import AdminLoginForm
+from homework_06.pages.AdminPage import AdminPage
+from homework_06.pages.elements.LoginForms import AdminLoginForm
 
 
 def test_admin_page_title(driver, base_url):

@@ -18,12 +18,12 @@
 ### Запуск:
 1. Переход в рабочую директорию.
 ```shell script
-qa_automation_course>cd homework_9/app
+qa_automation_course>cd homework_09/app
 ```
 
 2. Запуск скрипта
 ```shell script
-qa_automation_course/homework_9/app>python main.py [OPTIONS]
+qa_automation_course/homework_09/app>python main.py [OPTIONS]
 ```
 
 **Параметры:**

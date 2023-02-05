@@ -27,12 +27,12 @@ qa_automation_course>pip install -r requirements.txt
 
 2. Переход в рабочую директорию.
 ```shell script
-qa_automation_course>cd homework_7
+qa_automation_course>cd homework_07
 ```
 
 3. Запуск скрипта
 ```shell script
-qa_automation_course/homework_7>pytest
+qa_automation_course/homework_07>pytest
 ```
 
 4. Генерация Allure отчета

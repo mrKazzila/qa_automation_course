@@ -1,4 +1,4 @@
-from homework_6.pages.CartPage import CartPage
+from homework_06.pages.CartPage import CartPage
 
 
 def test_cart_page_title(driver, base_url):

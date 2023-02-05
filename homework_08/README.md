@@ -26,10 +26,10 @@ user1: 231
 ### Запуск:
 1. Переход в рабочую директорию.
 ```shell script
-qa_automation_course>cd homework_8/app
+qa_automation_course>cd homework_08/app
 ```
 
 2. Запуск скрипта
 ```shell script
-qa_automation_course/homework_8/app>python main.py
+qa_automation_course/homework_08/app>python main.py
 ```
