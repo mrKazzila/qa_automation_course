@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
-from .LoginData import Admin, User
 from ..BasePage import BasePage
+from .LoginData import Admin, User
 
 
 class UserLoginForm(BasePage):

@@ -1,6 +1,5 @@
 import pytest
 import requests
-
 from open_brewery_validators import SingleBreweryValidator
 
 

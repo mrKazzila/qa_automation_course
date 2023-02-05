@@ -1,5 +1,4 @@
 import pytest
-
 from src.Circle import Circle
 from src.Figure import Figure, ImpossibleFigureError
 

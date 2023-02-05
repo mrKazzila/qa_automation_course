@@ -1,10 +1,6 @@
 import pytest
 import requests
-
-from dog_api_validators import (
-    AllBreedsValidator,
-    RandomDogImageValidator,
-)
+from dog_api_validators import AllBreedsValidator, RandomDogImageValidator
 
 
 def test_status_code_api(base_url):

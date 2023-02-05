@@ -5,17 +5,10 @@ import argparse
 import traceback as tb
 from functools import wraps
 
-from helpers import (
-    create_json,
-    dict_maker,
-    read_data_with_books,
-    read_data_with_users,
-)
-from settings import (
-    DEFAULT_PATH_BOOKS_FILE,
-    DEFAULT_PATH_RESULT_FILE,
-    DEFAULT_PATH_USERS_FILE,
-)
+from helpers import (create_json, dict_maker, read_data_with_books,
+                     read_data_with_users)
+from settings import (DEFAULT_PATH_BOOKS_FILE, DEFAULT_PATH_RESULT_FILE,
+                      DEFAULT_PATH_USERS_FILE)
 
 
 def exception_decorator(func):

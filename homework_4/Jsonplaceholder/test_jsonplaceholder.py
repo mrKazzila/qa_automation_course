@@ -1,6 +1,5 @@
 import pytest
 import requests
-
 from jsonplaceholder_validators import SinglePostValidator, TestSchemaValidator
 
 

@@ -1,5 +1,4 @@
 import allure
-
 from pages.AdminPage import AdminPage
 from pages.elements.LoginForms import AdminLoginForm
 

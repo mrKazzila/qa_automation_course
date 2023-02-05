@@ -1,5 +1,4 @@
 import allure
-
 from pages.ProductPage import ProductPage
 
 

@@ -1,6 +1,5 @@
-from selenium.webdriver.common.by import By
-
 from framework import wait_element, wait_title_contain
+from selenium.webdriver.common.by import By
 
 
 class MainPage:

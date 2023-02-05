@@ -1,10 +1,8 @@
 import pytest
-
-from src.Triangle import Triangle
-from src.Square import Square
-from src.Rectangle import Rectangle
 from src.Circle import Circle
-
+from src.Rectangle import Rectangle
+from src.Square import Square
+from src.Triangle import Triangle
 from tests.FakeFigure import FakeFigure
 
 

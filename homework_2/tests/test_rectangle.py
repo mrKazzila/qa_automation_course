@@ -1,5 +1,4 @@
 import pytest
-
 from src.Figure import Figure, ImpossibleFigureError
 from src.Rectangle import Rectangle
 

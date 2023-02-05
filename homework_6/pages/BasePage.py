@@ -1,9 +1,10 @@
+from typing import NoReturn
+
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.remote import webdriver, webelement
-from typing import NoReturn
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class BasePage:

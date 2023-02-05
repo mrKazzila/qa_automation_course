@@ -1,6 +1,5 @@
 import allure
 import pytest
-
 from pages.UserPage import UserPage
 
 

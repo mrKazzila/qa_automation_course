@@ -2,8 +2,8 @@ import re
 from collections import Counter
 from typing import Optional, Union
 
-from FileManager import FileManager
 from data import Data, methods
+from FileManager import FileManager
 
 
 def check_is_file(log_path: str) -> bool:

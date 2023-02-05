@@ -1,7 +1,7 @@
 import traceback as tb
 from functools import wraps
 
-from helpers import create_file, generate_result_file_name, ReportCreator
+from helpers import ReportCreator, create_file, generate_result_file_name
 
 
 def exception_decorator(func):
