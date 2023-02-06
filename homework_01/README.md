@@ -1,5 +1,5 @@
-Домашнее задание №1
-=====
-### Цель:
+<h1 align="center">Homework №1</h1>
 
-- Прислать свой первый Pull Request в рамках курса
+### Goal:
+
+- Send first Pull Request as part of the course

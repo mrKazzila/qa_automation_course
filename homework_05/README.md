@@ -1,49 +1,39 @@
-Домашнее задание №5
-=====
-
-## Цель:
-- Научиться настраивать окружение для Selenium тестов, написать тесты, настроить ожидания к проекту. Научиться писать простые selenium скрипты.
-
-### Описание:
-#### Часть 1
-1. Написать фикстуру для запуска разных браузеров (firefox, chrome, opera).
-2. Выбор браузера должен осуществляться путем передачи аргумента командной строки pytest.
-3. По завершению работы тестов должно осуществляться закрытие браузера.
-4. Добавить опцию командной строки, которая указывает базовый URL opencart.
-
-#### Часть 2
-1. Написать тесты проверяющие элементарное наличие элементов на разных страницах приложения opencart
-2. Реализовать минимум пять тестов (одни тест = одна страница приложения)
-3. Использовать методы явного ожидания элементов
-
-Покрыть нужно:
-- Главную
-- Каталог
-- Карточку товара
-- Страницу логина в админку /admin
-- Страницу регистрации пользователя (/index.php?route=account/register)
+<h1 align="center">Homework №5</h1>
 
 
-### Запуск:
-0. Создание виртуального окружения.
-```shell script
-qa_automation_course>python -m venv venv
-```
+## Goal:
+- Learn how to set up an environment for Selenium tests, write tests, set up expectations for the project. Learn how to write simple selenium scripts.
 
-1. Активация виртуального окружения.
-```shell script
-qa_automation_course>cd venv/Scripts
-qa_automation_course/venv/Scripts>activate
-qa_automation_course/venv/Scripts> cd ../..
-qa_automation_course>pip install -r requirements.txt
-``` 
+## Description:
 
-2. Переход в рабочую директорию.
+#### Part 1
+1. Write a fixture to run different browsers (firefox, chrome, opera).
+2. The choice of browser should be made by passing the command line argument pytest.
+3. Upon completion of the tests, the browser should be closed.
+4. Add a command line option that specifies the base URL of opencart.
+
+
+#### Part 2
+1. Write tests that check the elementary presence of elements on different pages of the opencart application
+2. Implement at least five tests (one test = one application page)
+3. Use methods of explicit expectation of elements
+
+You need to cover:
+- The main
+- Catalog
+- Product card
+- Login page in the admin/admin
+- User registration page (/index.php?route=account/register)
+
+
+#### Launch:
+
+1. Moving to the working directory.
 ```shell script
 qa_automation_course>cd homework_05
 ```
 
-3. Запуск скрипта
+2. Running tests
 ```shell script
 qa_automation_course/homework_05>pytest
 ```

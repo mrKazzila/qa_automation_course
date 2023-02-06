@@ -1,41 +1,41 @@
-Домашнее задание №9
-=====
+<h1 align="center">Homework №9</h1>
 
-## Цель:
-- Потренироваться писать парсеры для логов.
+## Goal:
+- Practice writing parsers for logs.
 
-### Требования к реализации
-1. Должна быть возможность указать директорий где искать логи или конкретный файл
-2. Должна быть возможность обработки всех логов внутри одного директория
-3. Для access.log должна собираться следующая информация:
-   - общее количество выполненных запросов
-   - количество запросов по HTTP-методам: GET - 20, POST - 10 и т.п.
-   - топ 3 IP адресов, с которых были сделаны запросы
-   - топ 3 самых долгих запросов, должно быть видно метод, url, ip, длительность, дату и время запроса
-4. Собранная статистика должна быть сохранена в json файл и выведена в терминал в свободном (но понятном!) формате
-5. Должен быть README.md файл, который описывает как работает скрипт
+### Requirements
+1. It should be possible to specify directories where to look for logs or a specific file
+2. It should be possible to process all logs inside one directory
+3. The following information should be collected for access.log:
+ - total number of completed requests
+ - the number of requests by HTTP methods: GET - 20, POST - 10, etc.
+ - top 3 IP addresses from which requests were made
+ - top 3 longest requests, the method, url, ip, duration, date and time of the request should be visible
+4. The collected statistics should be saved in a json file and output to the terminal in a free (but understandable!) format
+5. Must be README.md a file that describes how the script works
 
-### Запуск:
-1. Переход в рабочую директорию.
+#### Launch:
+
+1. Moving to the working directory.
 ```shell script
 qa_automation_course>cd homework_09/app
 ```
 
-2. Запуск скрипта
+2. Running code
 ```shell script
 qa_automation_course/homework_09/app>python main.py [OPTIONS]
 ```
 
-**Параметры:**
+**Parameters:**
 
-| Параметр  | Тип | Описание | Значение по умолчанию |
-| ------------- | ------------- | ------------- | ------------- |
-| `--logs_path`  | `str` | Путь до лог файла или каталога слогами  | Обязательный параметр |
-| `--output_file_path`  | `str` | Путь куда сохраняем файл с результатом | Необязательный параметр | 
+| Parameter  | Type | Description                              | Default value |
+| ------------- | ------------- |------------------------------------------| ------------- |
+| `--logs_path`  | `str` | The path to the log file or logs folderи | Required |
+| `--output_file_path`  | `str` | The path to the result file              | Optional | 
 
 
 
-### Формат JSON файла для одного лог файла
+### JSON file format for a single log file
 ```json5
 {
    "count": 0000,
@@ -62,7 +62,7 @@ qa_automation_course/homework_09/app>python main.py [OPTIONS]
    ]
 }
 ```
-### Формат JSON файла для директории с .log файлами
+### JSON file format for a directory with .log files
 ```json5
 {
    "<log_file_name>.log": {

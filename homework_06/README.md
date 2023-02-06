@@ -1,38 +1,25 @@
-Домашнее задание №6
-=====
+<h1 align="center">Homework №6</h1>
 
-## Цель:
-- Научиться реализовывать PageObject шаблон в автотестах.
+## Goal:
+- Learn how to implement a PageObject template in autotests.
 
-### Описание:
+## Description:
 
-- Переписать уже имеющиеся тесты в проекта opencart на PageObject паттерн.
-- Добавить автотесты на следующие сценарии.
-  - Добавление нового товара в разделе администратора.
-  - Удаление товара из списка в разделе администартора.
-  - Регистрация нового пользователя в магазине опенкарта.
-  - Переключение валют из верхнего меню опенкарта.
+- Rewrite existing tests in the opencart project to the PageObject pattern.
+- Add autotests for the following scenarios.
+- Adding a new product in the admin section.
+- Removal of the product from the list in the admin section.
+- Registration of a new user in the opencart store.
+- Currency switching from the top menu of the opencart.
 
-### Запуск:
-0. Создание виртуального окружения.
-```shell script
-qa_automation_course>python -m venv venv
-```
+#### Launch:
 
-1. Активация виртуального окружения.
-```shell script
-qa_automation_course>cd venv/Scripts
-qa_automation_course/venv/Scripts>activate
-qa_automation_course/venv/Scripts> cd ../..
-qa_automation_course>pip install -r requirements.txt
-``` 
-
-2. Переход в рабочую директорию.
+1. Moving to the working directory.
 ```shell script
 qa_automation_course>cd homework_06
 ```
 
-3. Запуск скрипта
+2. Running tests
 ```shell script
 qa_automation_course/homework_06>pytest
 ```

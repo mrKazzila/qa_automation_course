@@ -1,56 +1,43 @@
-Домашнее задание №2
-===
-
-## Цель:
-- Научиться писать код в ООП стиле и покрывать его тестами.
-
-## Описание:
-Создать базовый класс геометрической фигуры (Figure).
-Реализовать классы геометрических фигур:
-- Треугольник
-- Прямоугольник
-- Квадрат
-- Круг
-
-Каждый класс должен располагаться в отдельном файле с соответствующим названием.
-Все файлы с классами должны находиться в папке src/ в корне репозитория.
-
-Каждая фигура должна иметь атрибуты:
-- name - название фигуры
-- area (вычисляемое!) - площадь
-- perimeter (вычисляемое!) - периметр (сумма длин сторон или длину окружности)
-- Каждая фигура должна реализовать метод add_area(figure), который должен принимать другую геометрическую фигуру и возвращать сумму площадей этих фигур.
+<h1 align="center">Homework №2</h1>
 
 
-Написать тесты с использованием pytest на эти классы.
-Все тесты должны располагаться в папке tests/ в корне репозитория.
+## Goal:
+- Learn how to write code in the OOP style and cover it with tests.
 
-## Запуск:
-0. Создание виртуального окружения.
-```shell script
-qa_automation_course>python -m venv venv
-```
+## Description:
+Create a base class of a geometric shape (Figure).
+Implement classes of geometric shapes:
+- Triangle
+- Rectangle
+- Square
+- Circle
 
-1. Активация виртуального окружения.
-```shell script
-qa_automation_course>cd venv/Scripts
-qa_automation_course/venv/Scripts>activate
-qa_automation_course/venv/Scripts> cd ../..
-qa_automation_course>pip install -r requirements.txt
-``` 
+Each class should be located in a separate file with the appropriate name.
+All files with classes should be located in the ```src/``` folder in the root of the repository.
 
-2. Переход в рабочую директорию.
+Each shape must have attributes:
+- ```name``` - name of the shape
+- ```area``` (calculated!) - area
+- ```perimeter``` (calculated!) - perimeter (the sum of the lengths of the sides or the length of the circle)
+- Each shape should implement the add_area(figure) method, which should take another geometric shape and return the sum of the areas of these shapes.
+
+Write tests using pytest on these classes.
+All tests should be located in the ```tests/``` folder in the root of the repository.
+
+## Launch:
+
+1. Moving to the working directory.
 ```shell script
 qa_automation_course>cd homework_02
-``` 
+```
 
-3. Запуск тестов.
+2. Running tests.
 ```shell script
 pytest
 ```
 
-**Параметры:**
+**Parameters:**
 
-| Параметр  |  Описание |
-| ------------- | ------------- |
-| `- m smoke`  | Запуск только smoke тестов |
+| Parameter  |  Description |
+| ------------ | ------------- |
+| `- m smoke` | Running only smoke tests |

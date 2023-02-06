@@ -1,35 +1,37 @@
-Домашнее задание №8
-=====
+<h1 align="center">Homework №8</h1>
 
-## Цель:
-- Попрактиковаться в работе с процессами ОС Linux.
+## Goal:
+- Practice working with Linux OS processes.
 
-### Описание:
-Написать парсер системных процессов команды 'ps aux' на языке Python с использованием стандартной библиотеки и модуля subprocess.
+## Description:
+Write a system process parser of the 'ps aux' command in Python using the standard library and the subprocess module.
 
-#### Пример:
+#### Example:
+
 ```txt
-Отчёт о состоянии системы:
-Пользователи системы: 'root', 'user1', ...
-Процессов запущено: 833
-Пользовательских процессов:
+System Status Report:
+System Users: 'root', 'user1', ...
+Processes started: 833
+User processes:
 root: 533
 user1: 231
 ...
-Всего памяти используется: 553.3 mb
-Всего CPU используется: 33.2%
-Больше всего памяти использует: (%имя процесса, первые 20 символов если оно длиннее)
-Больше всего CPU использует: (%имя процесса, первые 20 символов если оно длиннее)
+Total memory used: 553.3 mb
+Total CPU used: 33.2%
+Most memory uses: (%process name, first 20 characters if it is longer)
+Most CPU uses: (%process name, first 20 characters if it is longer)
 ```
-- Так же этот отчёт должен быть сохранён в отдельный txt файл с названием текущей даты и времени проверки.
 
-### Запуск:
-1. Переход в рабочую директорию.
+- Also, this report should be saved in a separate txt file with the name of the current date and time of verification.
+
+#### Launch:
+
+1. Moving to the working directory.
 ```shell script
 qa_automation_course>cd homework_08/app
 ```
 
-2. Запуск скрипта
+2. Running code
 ```shell script
 qa_automation_course/homework_08/app>python main.py
 ```

@@ -1,19 +1,19 @@
-Домашнее задание №10
-=====
+<h1 align="center">Homework №10</h1>
 
-## Цель:
-- Попрактиковаться с использованием модуля socket и сетевым взаимодействием по протоколу HTTP.
 
-### Требования к реализации
-1. Реализуем собственный echo-сервер с использованием библиотеки socket.
+## Goal:
+- Practice using the socket module and network interaction over the HTTP protocol.
 
-2. Ваш сервер должен принимать запрос от клиента и отправлять ему:
-   - заголовки, которые получил в запросе
-   - метод, которым был сделан запрос
-   - выставлять статус, который передал клиент в GET параметре status
-     - если параметр не передан или не валидный то отдавать 200
-     - если значение (опционально) сервер не должен прекращать работу после ответа клиенту, а продолжать ожидать следующего соединения
-   - Заголовки должны отображаться на странице в виде строк текста:
+### Requirements
+
+1. We implement our own echo server using the socket library.
+2. Your server must accept the request from the client and send it to him:
+   - headers received in the request
+   - the method by which the request was made
+   - set the status that the client passed in the GET status parameter
+   - if the parameter is not passed or is not valid, then give 200
+   - if the value is (optional), the server should not stop working after responding to the client, but continue to wait for the next connection
+   - Headings should be displayed on the page as lines of text:
      - Request Method: GET
      - Request Source: ('127.0.0.1', 47296)
      - Response Status: 200 OK
@@ -21,13 +21,14 @@
      - header-name: header-value
      - ...
 
-### Запуск:
-1. Переход в рабочую директорию.
+#### Launch:
+
+1. Moving to the working directory.
 ```shell script
 qa_automation_course>cd homework_10/echo_server
 ```
 
-2. Запуск скрипта
+2. Running code
 ```shell script
 qa_automation_course/homework_10/echo_server>python server.py
 ```

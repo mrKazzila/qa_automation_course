@@ -1,41 +1,28 @@
-Домашнее задание №7
-=====
+<h1 align="center">Homework №7</h1>
 
-## Цель:
-- Научиться внедрять в проект логгирование и отчётность allure.
+## Goal:
+- Learn how to implement allure logging and reporting into a project.
 
-### Описание:
-- Настройте логирование внутри PageObject'ов. (черед модуль logging).
-- Добавьте аннотации для шагов и тестов для трансляции в отчёт Allure.
-- Настройте Selenoid, добавьте несколько браузеров и запустите на них тесты.
-- Предусмотрите возможность запуска тестов как на удаленных сервисах так и локально.
-- Предусмотрите снятие скриншота и добавление его в отчёт при падении тестов.
+## Description:
 
-### Запуск:
-0. Создание виртуального окружения.
-```shell script
-qa_automation_course>python -m venv venv
-```
+- Configure logging inside PageObjects. (turn on the logging module).
+- Add annotations for steps and tests to be translated into the Allure report.
+- Configure Selenoid, add several browsers and run tests on them.
+- Provide the ability to run tests both on remote services and locally.
+- Provide for taking a screenshot and adding it to the report when the tests fall.
 
-1. Активация виртуального окружения.
-```shell script
-qa_automation_course>cd venv/Scripts
-qa_automation_course/venv/Scripts>activate
-qa_automation_course/venv/Scripts> cd ../..
-qa_automation_course>pip install -r requirements.txt
-``` 
-
-2. Переход в рабочую директорию.
+#### Launch:
+1. Moving to the working directory.
 ```shell script
 qa_automation_course>cd homework_07
 ```
 
-3. Запуск скрипта
+2. Running tests
 ```shell script
 qa_automation_course/homework_07>pytest
 ```
 
-4. Генерация Allure отчета
+3. Generating an Allure report
 ```shell script
-<Ваш путь до файла allure.bat> generate
+<Your path to the file allure.bat> generate
 ```

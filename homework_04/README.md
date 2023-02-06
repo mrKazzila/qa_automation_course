@@ -1,61 +1,47 @@
-Домашнее задание №4
-=====
+<h1 align="center">Homework №4</h1>
 
-## Цель:
-- Поучиться тестировать API сервисов на основе их документации.
+## Goal:
+- Learn how to test API services based on their documentation.
 
-## Описание:
-Тестирование каждого api оформить в отдельном тестовом модуле.
+## Description:
+Testing of each api should be done in a separate test module.
 
-1. Тестирование REST сервиса https://dog.ceo/dog-api/
-2. Тестирование REST сервиса https://www.openbrewerydb.org/
-3. Тестирование REST сервиса https://jsonplaceholder.typicode.com/
+1. Testing the REST service https://dog.ceo/dog-api/
+2. Testing the REST service https://www.openbrewerydb.org/
+3. Testing the REST service https://jsonplaceholder.typicode.com/
 
-#### Критерии
-- Для каждого REST сервиса написать минимум 5 тестов.
-- Как минимум 2 из 5 должны использовать параметризацию.
-- Тесты должны проходить успешно.
+#### Benchmark
+- Write at least 5 tests for each REST service.
+- At least 2 out of 5 should use parameterization.
+- The tests should be successful.
 
-Реализуйте в отдельном модуле тестовую функцию которая будет принимать 2 параметра:
-- url - должно быть значение по умолчанию https://ya.ru
-- status_code - значение по умолчанию 200
+Implement a test function in a separate module that will take 2 parameters:
+- ```url``` - there should be a default value https://ya.ru
+- ```status_code``` - default value 200
 
-#### Критерии 
-- Параметры должны быть реализованы через pytest.addoption.
-- Можно положить фикcтуру и тестовую функцию в один файл.
-Основная задача чтобы ваш тест проверял по переданному урлу статус ответа тот который передали,
-т.е. по адресу https://ya.ru/sfhfhfhfhfhfhfhfh должен быть валидным ответ 404
-пример запуска pytest test_module.py --url=https://mail.ru --status_code=200
+#### Benchmark
+- The parameters must be implemented via ```pytest.addoption```.
+- You can put a fixture and a test function in one file.
+The main task is for your test to check the status of the response from the transmitted url, the one that was transmitted,
+i.e. at the address ```https://ya.ru/sfhfhfhfhfhfhfhfh``` the 404 response must be valid
+example of running ```pytest test_module.py --url=https://mail.ru --status_code=200```
 
-## Запуск:
-0. Создание виртуального окружения.
-```shell script
-qa_automation_course>python -m venv venv
-```
-
-1. Активация виртуального окружения.
-```shell script
-qa_automation_course>cd venv/Scripts
-qa_automation_course/venv/Scripts>activate
-qa_automation_course/venv/Scripts> cd ../..
-qa_automation_course>pip install -r requirements.txt
-``` 
-
-2. Переход в рабочую директорию.
+#### Launch:
+1. Moving to the working directory.
 ```shell script
 qa_automation_course>cd homework_04
 ```
 
-3. Запуск скрипта
+3. Running tests.
 ```shell script
 qa_automation_course/homework_04>pytest [OPTIONS]
 ```
 
-**Параметры:**
+**Parameters:**
 
-| Параметр  |  Описание | Значение по умолчанию |
-| ------------- | ------------- | ------------- |
-| `Dog_api` | Запуск тестов для сервиса https://dog.ceo/dog-api/ | Необязательный параметр |
-| `Jsonplaceholder` | Запуск тестов для сервиса https://jsonplaceholder.typicode.com/ | Необязательный параметр |
-| `Open_brewery_db` | Запуск тестов для сервиса https://www.openbrewerydb.org/ | Необязательный параметр |
-| `test_validation_status_code.py` | Запуск теста для валидации status_code | Необязательный параметр |
+| Parameter  | Description                                                         | Default value |
+| ------------- |---------------------------------------------------------------------| ------------- |
+| `Dog_api` | Running tests for the service https://dog.ceo/dog-api/              | Optional |
+| `Jsonplaceholder` | Running tests for the service https://jsonplaceholder.typicode.com/ | Optional |
+| `Open_brewery_db` | Running tests for the service https://www.openbrewerydb.org/        | Optional |
+| `test_validation_status_code.py` | Running a validation status_code test                               | Optional |

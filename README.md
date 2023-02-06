@@ -1,29 +1,30 @@
-Python QA Engineer
-=====
+<h1 align="center">Python QA Engineer</h1>
 
-### Цель:
-Изучение автоматизации тестирования:
-- фреймворк pytest
-- автоматизация интерфейсов UI и API
-- использование паттерна PageObject
-- использование allure отчетов
-- работа с логами
-- запуск автотестов:
-  - через docker
-  - в CI (Jenkins)
+### Course homework repo:
+[OTUS | Python QA Enginee (homepage)](https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/)
 
-#### Домашки:
-- [Homework 1 (Первый Pull Request)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_1/README.md)
-- [Homework 2 (Научиться писать код в ООП стиле и покрывать его тестами)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_2/README.md)
-- [Homework 3 (Научиться работать с различными типами файлов)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_3/README.md)
-- [Homework 4 (Тестировать API сервисов на основе их документации)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_4/README.md)
-- [Homework 5 (Настройка окружения для Selenium тестов)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_5/README.md)
-- [Homework 6 (PageObject)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_6/README.md)
-- [Homework 7 (Логгирование и отчётность allure)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_7/README.md)
-- [Homework 8 (Работе с ОС Linux)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_8/README.md)
-- [Homework 9 (Парсер для логов)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_9/README.md)
-- [Homework 10 (Echo-сервер с использованием библиотеки socket)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_10/README.md)
+### Course goals:
+Learning test automation:
+- pytest framework
+- automation of UI and API interfaces
+- using the PageObject pattern
+- using allure reports
+- working with logs
+- launching autotests:
+- via docker
+- in CI (Jenkins)
 
 
-##### Контакты:
-- [My LinkedIn profile](https://www.linkedin.com/in/i-kazakov/)
+#### Homeworks:
+- [Homework 0 (Prepare local environment)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_00/README.md)
+- [Homework 1 (First Pull Request)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_01/README.md)
+- [Homework 2 (Learn how to write code in OOP style and cover it with tests)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_02/README.md)
+- [Homework 3 (Learn how to work with different types of files)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_03/README.md)
+- [Homework 4 (Test the API of services based on their documentation)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_04/README.md)
+- [Homework 5 (Setting up the environment for Selenium tests)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_05/README.md)
+- [Homework 6 (PageObject)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_06/README.md)
+- [Homework 7 (Logging and reporting by allure)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_07/README.md)
+- [Homework 8 (Working with Linux OS)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_08/README.md)
+- [Homework 9 (Parser for logs)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_09/README.md)
+- [Homework 10 (Echo server using the socket library)](https://github.com/Kazzila/qa_automation_course/blob/main/homework_10/README.md)
+
