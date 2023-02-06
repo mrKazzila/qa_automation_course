@@ -15,7 +15,7 @@ class TestSchemaValidator(BaseModel):
     userId: int  # noqa N815
 
     @root_validator
-    def check_test_post_response(self, values):
+    def check_test_post_response(cls, values):  # noqa
         values_list = [1, 'foo', 'bar', 101]
         for value in values.values():
             if value not in values_list:
