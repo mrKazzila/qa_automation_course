@@ -1,11 +1,30 @@
-<h1 align="center">Homework №10</h1>
+<h1 align="center">
+  <a href="https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/">
+    <img src="../readme/otus.png"
+    alt="Otus" width="200">
+  </a>
+  <br>
+   Python QA Engineer
+  <br>
+</h1>
+
+<h4 align="center">
+    Homework №10
+</h4>
+<hr>
+
+<p align="center">
+  <a href="#goal">Goal</a> •
+  <a href="#description">Requirements</a> •
+  <a href="#launch">Launch</a>
+</p>
 
 
-## Goal:
+## Goal
 - Practice using the socket module and network interaction over the HTTP protocol.
 
-### Requirements
 
+## Requirements
 1. We implement our own echo server using the socket library.
 2. Your server must accept the request from the client and send it to him:
    - headers received in the request
@@ -21,14 +40,22 @@
      - header-name: header-value
      - ...
 
-#### Launch:
 
-1. Moving to the working directory.
+## Launch
+1. Moving to the working directory
 ```shell script
-qa_automation_course>cd homework_10/echo_server
+cd homework_10/echo_server
 ```
 
 2. Running code
 ```shell script
-qa_automation_course/homework_10/echo_server>python server.py
+python server.py
 ```
+
+
+<br>
+<p align="center">
+  <a href="https://github.com/Kazzila">GitHub</a> •
+  <a href="https://kazzila.github.io/resume/">Resume</a> •
+  <a href="https://www.linkedin.com/in/i-kazakov/">LinkedIn</a>
+</p>

@@ -1,5 +1,4 @@
 <h1 align="center">
-  <br>
   <a href="https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/">
     <img src="../readme/otus.png"
     alt="Otus" width="200">
@@ -10,11 +9,7 @@
 </h1>
 
 <h4 align="center">
-    Repository with homeworks from course
-    <br>
-    <a href="https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/" target="_blank">
-      Otus | Python QA Engineer
-    </a>
+    Homework №1
 </h4>
 <hr>
 

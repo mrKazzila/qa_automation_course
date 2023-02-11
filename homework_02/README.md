@@ -1,10 +1,30 @@
-<h1 align="center">Homework №2</h1>
+<h1 align="center">
+  <a href="https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/">
+    <img src="../readme/otus.png"
+    alt="Otus" width="200">
+  </a>
+  <br>
+   Python QA Engineer
+  <br>
+</h1>
+
+<h4 align="center">
+    Homework №2
+</h4>
+<hr>
+
+<p align="center">
+  <a href="#goal">Goal</a> •
+  <a href="#description">Description</a> •
+  <a href="#launch">Launch</a>
+</p>
 
 
-## Goal:
+## Goal
 - Learn how to write code in the OOP style and cover it with tests.
 
-## Description:
+
+## Description
 Create a base class of a geometric shape (Figure).
 Implement classes of geometric shapes:
 - Triangle
@@ -24,20 +44,28 @@ Each shape must have attributes:
 Write tests using pytest on these classes.
 All tests should be located in the ```tests/``` folder in the root of the repository.
 
-## Launch:
 
-1. Moving to the working directory.
+## Launch
+1. Moving to the working directory
 ```shell script
-qa_automation_course>cd homework_02
+cd homework_02
 ```
 
-2. Running tests.
+2. Running tests
 ```shell script
 pytest
 ```
 
-**Parameters:**
+**Parameters**
 
 | Parameter  |  Description |
 | ------------ | ------------- |
 | `- m smoke` | Running only smoke tests |
+
+
+<br>
+<p align="center">
+  <a href="https://github.com/Kazzila">GitHub</a> •
+  <a href="https://kazzila.github.io/resume/">Resume</a> •
+  <a href="https://www.linkedin.com/in/i-kazakov/">LinkedIn</a>
+</p>
