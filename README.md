@@ -68,7 +68,6 @@ Learning test automation:
 
 
 <br>
-<br>
 <p align="center">
   <a href="https://github.com/Kazzila">GitHub</a> •
   <a href="https://kazzila.github.io/resume/">Resume</a> •
