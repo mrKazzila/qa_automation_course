@@ -1,45 +1,58 @@
-<h1 align="center">Homework №0</h1>
+<h1 align="center">
+  <br>
+  <a href="https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/">
+    <img src="../readme/otus.png"
+    alt="Otus" width="200">
+  </a>
+  <br>
+   Python QA Engineer
+  <br>
+</h1>
+
+<h4 align="center">
+    Repository with homeworks from course
+    <br>
+    <a href="https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/" target="_blank">
+      Otus | Python QA Engineer
+    </a>
+</h4>
+<hr>
+
+<p align="center">
+  <a href="#goal">Goal</a> •
+  <a href="#description">Description</a>
+</p>
 
 
-## Goal:
+## Goal
 - Prepare local environment
 
-## Description:
-- Install & settings Poetry
+
+## Description
+1. Install & settings Poetry
+2. Install library's for work
+
+
+- Install Poetry
+  - use Pip
+    - ```pip install poetry ```
+  - or use Terminal
+    - ```(Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -```
+
+- Settings Poetry
+  - Create .venv folder in project 
+    - ```poetry config virtualenvs.in-project true```
+
+- Init Poetry
+  - ```poetry init```
+
+- Input some information about you project (or skip settings by ```Enter```)
+
+- Activate env with poetry
+  - ```poetry shell```
+
+
 - Install library's for work
-
-### Install Poetry.
-
-#### use Pip
-```shell script
-pip install poetry
-```
-
-#### or use Terminal
-```shell script
-(Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
-```
-
-
-### Settings Poetry
-#### Create .venv folder in project 
-```shell script
-poetry config virtualenvs.in-project true
-```
-
-### Init Poetry
-```shell script
-poetry init
-```
-#### Input some information about you project (or skip settings by ```Enter```)
-
-
-### Activate env with poetry
-```shell script
-poetry shell
-```
-
-### Install library's for work
 ```shell script
 poetry add pytest==7.1.2
 poetry add requests==2.27.1
@@ -49,7 +62,7 @@ poetry add allure-pytest==2.9.45
 poetry add pytest-xdist==2.5.0
 ```
 
-### For pre-commit hooks or manual check style you may add some linters
+- For pre-commit hooks or manual check style you may add some linters
 ```shell script
 poetry add flake8 --dev
 poetry add flake8-import-order --dev
@@ -59,3 +72,11 @@ poetry add flake8-bugbear --dev
 poetry add flake8-commas --dev
 poetry add pep8-naming= --dev
 ```
+
+
+<br>
+<p align="center">
+  <a href="https://github.com/Kazzila">GitHub</a> •
+  <a href="https://kazzila.github.io/resume/">Resume</a> •
+  <a href="https://www.linkedin.com/in/i-kazakov/">LinkedIn</a>
+</p>
