@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/">
-    <img src="../readme/otus.png"
+    <img style="background-color: #ffffff" src="../readme/otus.svg"
     alt="Otus" width="200">
   </a>
   <br>
