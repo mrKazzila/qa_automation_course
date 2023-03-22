@@ -20,10 +20,12 @@ def exception_decorator(func):
 
 @exception_decorator
 def main():
+    result = ReportCreator().report()
     create_file(
         file_name=generate_result_file_name(),
-        result_info=ReportCreator().report(),
+        result_info=result,
     )
+    print(result)
 
 
 if __name__ == '__main__':

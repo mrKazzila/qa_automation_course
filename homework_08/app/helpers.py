@@ -57,11 +57,11 @@ class ReportCreator(PsAuxParser):
         return round(self._cpu_usages_info()[self._get_max_cpu_data()], 2)
 
     def report(self) -> str:
-        return f'Пользователи системы: {self.get_system_users}\n' \
-               f'Процессов запущено: {self.get_count_process}\n' \
-               f'Пользовательских процессов: {self.INDENT} {self.get_users_process}\n' \
-               f'Всего памяти используется: {self.get_all_cpu_usage} Mb\n' \
-               f'Всего CPU используется: {self.get_all_mem_usage}%\n' \
-               f'Больше всего памяти использует: ' \
+        return f'System users: {self.get_system_users}\n' \
+               f'Processes running: {self.get_count_process}\n' \
+               f'User processes: {self.INDENT} {self.get_users_process}' \
+               f'Total memory used: {self.get_all_cpu_usage} Mb\n' \
+               f'Total CPU used: {self.get_all_mem_usage}%\n' \
+               f'Uses the most memory: ' \
                f'"{self.biggest_mem_process_name}" - {self.biggest_mem_process_count}Mb\n' \
-               f'Больше всего CPU использует: "{self.biggest_cpu_process_name}" - {self.biggest_cpu_process_count}%\n'
+               f'Most CPU uses: "{self.biggest_cpu_process_name}" - {self.biggest_cpu_process_count}%\n'
