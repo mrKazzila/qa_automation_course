@@ -137,3 +137,10 @@ qaa_venv/
 /homework_07/logs/
 /homework_07/allure-results/
 /homework_07/allure-report/
+Dockerfile
+README.md
+.flake8
+.git
+.idea
+.dockerignore
+.gitignore

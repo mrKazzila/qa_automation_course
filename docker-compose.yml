@@ -5,6 +5,7 @@ services:
   mariadb:
     container_name: mariadb
     image: docker.io/bitnami/mariadb:10.3
+    platform: linux/amd64
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - MARIADB_USER=bn_opencart
@@ -20,6 +21,8 @@ services:
   opencart:
     container_name: opencart
     image: docker.io/bitnami/opencart:3
+    platform: linux/amd64
+    user: root
     ports:
       - '8081:8080'
       - '443:8443'
@@ -29,10 +32,11 @@ services:
       - OPENCART_DATABASE_PORT_NUMBER=3306
       - OPENCART_DATABASE_USER=bn_opencart
       - OPENCART_DATABASE_NAME=bitnami_opencart
+      - OPENCART_SKIP_BOOTSTRAP=yes
       - ALLOW_EMPTY_PASSWORD=yes
     volumes:
-      - 'opencart_data:/bitnami/opencart'
-      - 'opencart_storage_data:/bitnami/opencart_storage/'
+      - './opencart_data:/bitnami/opencart'
+      - './opencart_storage_data:/bitnami/opencart_storage/'
     depends_on:
       - mariadb
     networks:
