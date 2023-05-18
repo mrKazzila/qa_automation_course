@@ -51,7 +51,7 @@ pytest
 
 <br>
 <p align="center">
-  <a href="https://github.com/Kazzila">GitHub</a> •
-  <a href="https://kazzila.github.io/resume/">Resume</a> •
+  <a href="https://github.com/mrKazzila">GitHub</a> •
+  <a href="https://mrkazzila.github.io/resume/">Resume</a> •
   <a href="https://www.linkedin.com/in/i-kazakov/">LinkedIn</a>
 </p>
