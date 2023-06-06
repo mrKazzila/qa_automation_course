@@ -1,5 +1,4 @@
 from datetime import datetime
-from typing import NoReturn
 
 from comands import PsAuxParser
 
@@ -9,7 +8,7 @@ def generate_result_file_name() -> str:
     return f'{date_format}-scan.txt'
 
 
-def create_file(file_name: str, result_info) -> NoReturn:
+def create_file(file_name: str, result_info) -> None:
     with open(file_name, 'w') as result_file:
         result_file.write(result_info)
 

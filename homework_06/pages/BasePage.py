@@ -1,5 +1,3 @@
-from typing import NoReturn
-
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.remote import webdriver, webelement
@@ -12,7 +10,7 @@ class BasePage:
     def __init__(self, driver: webdriver):
         self.driver = driver
 
-    def _wait_title_contain(self, text: str, timeout: float = 3) -> NoReturn:
+    def _wait_title_contain(self, text: str, timeout: float = 3) -> None:
         try:
             WebDriverWait(self.driver, timeout).until(
                 ec.title_contains(text),
@@ -39,9 +37,9 @@ class BasePage:
     def _element(self, locator: tuple) -> webelement:
         return self._wait_element(locator=locator)
 
-    def _click(self, locator: tuple) -> NoReturn:
+    def _click(self, locator: tuple) -> None:
         element = self._element(locator)
         ActionChains(self.driver).pause(0.2).move_to_element(element).click().perform()
 
-    def _accept_allert(self) -> NoReturn:
+    def _accept_allert(self) -> None:
         self.driver.switch_to.alert.accept()

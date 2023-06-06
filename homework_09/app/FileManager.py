@@ -31,7 +31,7 @@ class FileManager:
         return os.path.join(os.getcwd(), f'parse_result_{date_format}.json')
 
     @staticmethod
-    def writer(output_file: str, log_data) -> NoReturn:
+    def writer(output_file: str, log_data) -> None:
         with open(output_file, 'w', encoding='utf-8') as json_file:
             print(json.dumps(log_data, indent=3, ensure_ascii=False))
             json.dump(log_data, json_file, indent=3, ensure_ascii=False)

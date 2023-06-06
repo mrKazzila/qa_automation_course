@@ -1,6 +1,6 @@
 import csv
 import json
-from typing import List, NoReturn
+from typing import List
 
 from settings import CountInfo
 
@@ -48,7 +48,7 @@ def read_data_with_books(file_name: str) -> List[dict]:
         ]
 
 
-def create_json(data: list, file_path: str) -> NoReturn:
+def create_json(data: list, file_path: str) -> None:
     """
     Формируем json файл c результатами
 
